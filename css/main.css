@@ -2,29 +2,7 @@
 
 main{/*margin-top: 111px; */ margin-top: 200px;}
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* product */
+/* 제품 */
 #productWrap{margin: 95px 0 0 80px; position: relative; /*height: 1080px;*/ padding: 0 0 76px 0; overflow: hidden; background-color: #222;}
 #productWrap .productBg{position: absolute; top:0; left:0; bottom: 0; width: 759px; overflow: hidden;}
 #productWrap .productBg img{display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.6); transition: all 2s;}
@@ -54,11 +32,11 @@ main{/*margin-top: 111px; */ margin-top: 200px;}
 #productWrap .productList a:hover .imgBox .infoText{color: #0c5ed8;}
 #productWrap .productList a:hover .imgBox .infoText::before{width: 100%;}
 #productWrap .swiper-container{margin-left: 451px;}
-#productWrap a.view{display: flex; align-items: center; position: absolute; top:327px; right:171px; padding-left: 16px; width: 132px; height: 38px; font-size: 14px; color: #00ccff; border: 1px solid #3fd9ff; transition: all .3s; z-index: 1;}
+#productWrap a.view{display: flex; align-items: center; position: absolute; top:327px; right:171px; padding-left: 16px; width: 132px; height: 38px; font-size: 14px; color: #00ccff; border: 1px solid #3fd9ff;  z-index: 1;}
 #productWrap a.view::after{content: ''; position: absolute; top:13px; right:15px; width: 19px; height: 10px; background: url(../images/main/arrow_icon.png)no-repeat center; background-size: cover;} 
 #productWrap a.view::before{content: ''; position: absolute; top:0; left: 0; bottom: 0; width: 0; transition: all .3s; background-color: #00ccff; z-index: -1;}
 #productWrap a.view:hover:before{width: 100%; }
-#productWrap a.view:hover::after{background: url(../images/main/arrow_icon02.png)no-repeat center; background-size: cover;}
+#productWrap a.view:hover::after{background: url(../images/main/arrow_icon02.png)no-repeat center; background-size: cover; transition: all .3s;}
 #productWrap a.view:hover{border: 0; color: #fff;}
 
 @media (max-width: 1680px){
@@ -145,7 +123,7 @@ main{/*margin-top: 111px; */ margin-top: 200px;}
 
 }
 
-/* contact */
+/* 문의 */
 #contactWrap{padding: 88px 0; background-color: #f5f5f5; background: url(../images/main/contact_bg.jpg)no-repeat center; background-size: cover;}
 #contactWrap .contactBox{display: flex; justify-content: space-between;}
 #contactWrap .mapBox{position: relative; padding-top: 51.45%; width: 50.23%; height: 0; border: 1px solid #dcdcdc;}

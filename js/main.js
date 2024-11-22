@@ -1,5 +1,12 @@
 $(function () {
 
+  /* aos */
+  $(window).load(function () {
+    AOS.init({
+      duration: 1500
+    });
+  });
+
   const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 'auto',

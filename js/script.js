@@ -16,6 +16,7 @@ $(function () {
 
     $('#header').addClass('active');
     $('.subTopText').addClass('active');
+    $('.subTitleBox .subTopImg').addClass('active')
 
   });
 

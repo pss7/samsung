@@ -2,6 +2,7 @@
 
 /* 가운데영역 */
 .container{max-width: 1800px; margin: 0 auto; padding: 0 20px;}
+.inner{max-width: 1640px; margin: 0 auto; padding: 0 20px;}
 
 /* 공통-헤더 */
 #header{position: fixed; top:-100px; left:0; right:0; background-color: #fff; z-index: 999; transition: all 1s;}
@@ -50,7 +51,7 @@
 
 
 /* 공통-푸터 */
-#footer{padding: 168px 0 96px;}
+#footer{padding: 168px 0 96px; border-top: 1px solid #ccc;}
 #footer .footer{position: relative;}
 #footer .copyRight{position: absolute; bottom: 4px; right: 0; font-size: 12px; color: #1c1c1c;}
 #footer .layoutBox{display: flex; justify-content: space-between;}
