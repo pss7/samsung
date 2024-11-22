@@ -21,6 +21,7 @@ main{/*margin-top: 111px; */ margin-top: 200px;}
 #productWrap .productList a .imgBox .infoText{position: relative; padding-left: 14px; position: absolute; left: 0; bottom: -19px; width: 127px; height: 36px; line-height: 38px; background-color: #0c69f4; font-weight: 500; color: #fff; font-size: 12px; text-align: left; z-index: 1;}
 #productWrap .productList a .imgBox .infoText::before{content: ''; position: absolute; top:0; left:0; bottom:0; width: 0; transition: all .3s; background-color: #fff; z-index: -1;}
 #productWrap .productList a .imgBox .infoText em{font-size: 16px;}
+#productWrap .productList a .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
 #productWrap .productList a .textBox{padding: 351px 0 0 14px;}
 #productWrap .productList a .textBox h4{margin-bottom: 4px; font-size: 24px; font-weight: 700; color: #000;}
 #productWrap .productList a .textBox span{display: block; font-size: 11px; color: #404040;}
