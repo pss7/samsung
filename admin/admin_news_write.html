@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="Author" content="" />
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <title>관리자</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://fonts.cdnfonts.com/../css/samsung-sharp-sans" rel="stylesheet">
+    <link href="
+https://cdn.jsdelivr.net/npm/@noonnu/spoqa-han-sans-neo-regular@0.1.0/index.min.css
+" rel="stylesheet">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/admin.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <main id="admin">
+            <div class="adminLayoutBox">
+                <div class="adminMenu">
+                    <div class="logo">
+                        <span class="blind">
+                            SAMSUNG C&T CHARGING SOLUTIONS
+                        </span>
+                    </div>
+                    <!-- //logo -->
+
+                    <nav class="menu">
+                        <ul class="menuList">
+                            <li class="news">
+                                <a href="#" class="active">
+                                    <span>NEWS</span>
+                                </a>
+                            </li>
+                            <li class="resources">
+                                <a href="./admin_resources_write.html">
+                                    <span>RESOURCES</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- //menu -->
+
+                </div>
+                <!-- //adminMenu -->
+
+                <div class="adminContent">
+                    <div class="userBox">
+                        <div class="box">
+                            <div class="userImg">
+                                <img src="../images/common/userImg.png" alt="">
+                            </div>
+                            <div class="userText">
+                                <span>Hello!</span>
+                                <em>
+                                    Wmmm2232
+                                </em>
+                            </div>
+                        </div>
+                        <a href="#">
+                            Logout
+                        </a>
+                    </div>
+                    <!-- //userBox -->
+
+                    <div class="titleBox">
+                        <h1 class="news">
+                            NEWS
+                        </h1>
+                    </div>
+
+                    <div class="adminWriteBox">
+                        <table class="adminWriteTable">
+                            <caption class="blind">글쓰기 테이블</caption>
+                            <colgroup>
+                                <col style="width: 123px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Title
+                                    </th>
+                                    <td>
+                                        <div class="inputBox">
+                                            <div class="inputTextBox">
+                                                <label for="title" class="blind">
+                                                    제목입력
+                                                </label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="content">
+                                    <th>
+                                        Content
+                                    </th>
+                                    <td>
+                                        <div class="textareaBox">
+                                            <label for="content" class="blind">
+                                                내용입력
+                                            </label>
+                                            <textarea id="content"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Thump
+                                    </th>
+                                    <td>
+                                        <div class="inputFileBox">
+                                            <input class="fileUpload" value="">
+                                            <label for="file01">File</label>
+                                            <input type="file" id="file01" class="blind">
+                                            <button class="fileDel">
+                                                <span class="blind">파일삭제</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Banner
+                                    </th>
+                                    <td>
+                                        <div class="inputFileBox">
+                                            <input class="fileUpload" value="">
+                                            <label for="file02">File</label>
+                                            <input type="file" id="file02" class="blind">
+                                            <button class="fileDel">
+                                                <span class="blind">파일삭제</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        File
+                                    </th>
+                                    <td>
+                                        <div class="inputFileBox">
+                                            <input class="fileUpload" value="">
+                                            <label for="file03">File</label>
+                                            <input type="file" id="file03" class="blind">
+                                            <button class="fileDel">
+                                                <span class="blind">파일삭제</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Date
+                                    </th>
+                                    <td>
+                                        <div class="inputTextBox">
+                                            <label for="date" class="blind">날짜</label>
+                                            <input id="date" type="text" value="2024-12-11" style="max-width: 382px;"
+                                                readonly>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //adminWriteBox -->
+
+                    <div class="adminBtnBox">
+                        <a href="#" class="btn btn01">
+                            List
+                        </a>
+                        <button class="btn btn02">
+                            Save
+                        </button>
+                    </div>
+
+                </div>
+                <!-- //adminContent -->
+
+            </div>
+            <!-- //adminLayoutBox -->
+
+        </main>
+        <!-- //admin -->
+
+    </div>
+    <!-- //wrap -->
+
+</body>
+
+</html>

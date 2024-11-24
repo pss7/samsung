@@ -162,11 +162,9 @@ main{margin-top: 111px; min-height: 500px;}
 .detailWrap .detailContentBox .detailContent{padding: 3.65vw 0 0;}
 .detailWrap .detailContentBox .detailContent .textBox p{margin-bottom: 30px; font-weight: 300; color: #000; line-height: 2.1; font-family: 'SpoqaHanSansNeo', sans-serif;}
 .detailWrap .detailContentBox .detailContent .imgBox img{display: block; width: 100%;}
-.btnBox{display: flex; justify-content: flex-end; margin: 40px 0 20px;}
+.detailWrap .btnBox{display: flex; justify-content: flex-end; margin: 40px 0 20px;}
 .btnBox .link{position: relative; padding: 3px 0 0 15px; width: 132px; height: 34px; display: flex; align-items: center; font-size: 11px; color: #171717; border: 1px solid #2f2f2f;}
 .btnBox .link::after{content: ''; position: absolute; top:11px; right:11px; width: 19px; height: 10px; background: url(../images/sub/arrow_icon02.png)no-repeat center; background-size: cover;}
-
-
 
 @media (max-width: 1199px){
 
@@ -187,10 +185,6 @@ main{margin-top: 111px; min-height: 500px;}
   .detailWrap .detailContentBox .detailTop .textBox h3{font-size: 20px;}
 
 }
-
-
-
-
 
 /* 소개 */ 
 .aboutWrap .TopTitle{padding: 50px 0 94px; text-align: center;}
@@ -295,4 +289,65 @@ main{margin-top: 111px; min-height: 500px;}
 
 }
 
+/* 해결 */
+.solutionsWrap .titleBox{margin-left: 47%;}
+.solutionsWrap .titleBox h3{font-size: 90px; color: #000; } 
+.solutionsWrap .solutionsTopBox{margin-bottom: 63px;}
+.solutionsWrap .solutionsTopBox .solutionsTop{display: flex;}
+.solutionsWrap .solutionsTopBox .solutionsTop .imgBox img{display: block; width: 100%;}
+.solutionsWrap .solutionsTopBox .solutionsTop .textBox{padding: 56px 0 0;}
+.solutionsWrap .solutionsTopBox .solutionsTop .textBox .title{margin-bottom: 11px; font-family: 'SpoqaHanSansNeo', sans-serif; font-weight:700; color: #000; font-size: 32px; letter-spacing: -2px;}
+.solutionsWrap .solutionsTopBox .solutionsTop .textBox .text{font-family: 'SpoqaHanSansNeo', sans-serif; font-weight: 300; color: #000; line-height: 2.2;}
+.solutionsWrap .solutionsTopBox .solutionsTop .textBox .text span{display: block; margin-bottom: 13px;}
+.solutionsWrap .casesBox{display: flex; gap: 0 56px; margin-left: 31.2%;}
+.solutionsWrap .casesBox .casesLeft{flex-shrink: 0; padding: 239px 0 0;}
+.solutionsWrap .casesBox .casesLeft .titleBox{margin:0 0 17px;}
+.solutionsWrap .casesBox .casesLeft .titleBox .title{font-size: 60px; color: #000; }
+.solutionsWrap .casesBox .casesRight .casesSlide{display: flex;}
+.solutionsWrap .casesBox .casesRight .casesSlide a:hover img{transform: scale(1.3);}
+.solutionsWrap .casesBox .casesRight .casesSlide a{display: block; width: 374px; margin-right: 79px;}
+.solutionsWrap .casesBox .casesRight .casesSlide a .imgBox{overflow: hidden;}
+.solutionsWrap .casesBox .casesRight .casesSlide a .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover; transition: all 1s;}
+.solutionsWrap .casesBox .casesRight .casesSlide a .textBox{padding: 32px 0 0 19px;}
+.solutionsWrap .casesBox .casesRight .casesSlide a .textBox h4{margin-bottom: 6px; font-size: 24px; color: #000;}
+.solutionsWrap .casesBox .casesRight .casesSlide a .textBox p{color: #000;}
 
+@media (max-width: 1199px){
+
+  .solutionsWrap .titleBox{padding: 0 20px; margin: 0 0 25px;}
+  .solutionsWrap .titleBox h3{font-size: 45px; text-align: left;} 
+  .solutionsWrap .solutionsTopBox .solutionsTop{gap: 0 50px;}
+  .solutionsWrap .solutionsTopBox .solutionsTop .textBox{padding: 30px 0 0; width: 100%;}
+  .solutionsWrap .solutionsTopBox .solutionsTop .textBox .title{font-size: 25px;}
+
+
+  .solutionsWrap .casesBox .casesRight .casesSlide a{margin-right: 30px;}
+  .solutionsWrap .btnBox{margin-left: 0;}
+  .solutionsWrap .casesBox .casesLeft .titleBox{padding: 0;}
+  .solutionsWrap .casesBox .casesLeft .titleBox .title{font-size: 45px;}
+  .solutionsWrap .casesBox{margin-left: 0; padding: 0 0 0 20px;}
+  .solutionsWrap .casesBox .casesRight .casesSlide a .textBox{padding: 20px 0 0;}
+  .solutionsWrap .casesBox .casesRight .casesSlide a .textBox h4{font-size: 20px;}
+
+}
+
+@media (max-width: 767px){
+
+  .solutionsWrap .titleBox h3{font-size: 30px;} 
+  .solutionsWrap .solutionsTopBox .solutionsTop .textBox .title{font-size: 20px;}
+  .solutionsWrap .solutionsTopBox .solutionsTop .textBox .text{font-size: 14px;}
+  .solutionsWrap .solutionsTopBox .solutionsTop{display: block;}
+
+  .solutionsWrap .casesBox{display: block;}
+  .solutionsWrap .casesBox .casesLeft .titleBox .title{font-size: 30px;}
+  .solutionsWrap .casesBox .casesLeft{padding: 0; margin-bottom: 30px;}
+  .solutionsWrap .casesBox .casesRight .casesSlide a .textBox h4{font-size: 18px;}
+
+}
+
+@media (max-width: 414px){
+
+  .solutionsWrap .casesBox{padding: 0 20px;}
+  .solutionsWrap .casesBox .casesRight .casesSlide a{margin-right: 0;}
+
+}

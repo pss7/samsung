@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+.adminWrap{padding: 82px 0 65px;}
+
+/* 가운데 영역 */
+.container{max-width: 1722px; padding: 0 20px; margin: 0 auto;}
+
+/* 관리자-리스트 */
+.adminLayoutBox{display: flex;}
+.adminLayoutBox .adminMenu{padding: 63px 0 0 63px; flex-shrink: 0; width: 469px; background-color: #0046fe; border-radius: 0 30px 30px 0;}
+.adminLayoutBox .adminMenu .logo{margin-bottom: 89px; padding: 30px 345px 0 0; display: inline-block;  background: url(../images/common/logo02.png)no-repeat; background-size: 100% auto;}
+.adminLayoutBox .adminMenu .menu .menuList li{margin-bottom: 50px;}
+.adminLayoutBox .adminMenu .menu .menuList li a{display: block;}
+.adminLayoutBox .adminMenu .menu .menuList li a span{position: relative; display: flex; gap: 0 24px; align-items: center; font-weight: 700; font-size: 20px; color: #fff; letter-spacing: 1px;}
+.adminLayoutBox .adminMenu .menu .menuList li a.active span{color: #fff600;}
+.adminLayoutBox .adminMenu .menu .menuList li.news{margin-left: 109px;}
+.adminLayoutBox .adminMenu .menu .menuList li.news a span::before{content: ''; padding: 34px 33px 0 0; background-size: 100% auto; background-image: url(../images/common/news_icon.png); background-repeat: no-repeat;}
+.adminLayoutBox .adminMenu .menu .menuList li.resources{margin-left: 84px;}
+.adminLayoutBox .adminMenu .menu .menuList li.resources a span::before{content: ''; padding: 37px 31px 0 0; background-size: 100% auto; background-image: url(../images/common/resources_icon.png); background-repeat: no-repeat;}
+.adminLayoutBox .adminMenu .menu .menuList li.resources a.active span::before{background-image: url(../images/common/active_resources_icon.png);}
+.adminLayoutBox .adminContent{width: 100%; padding: 65px 100px 30px 50px;}
+.adminLayoutBox .adminContent .userBox{margin-bottom: 76px; display: flex; align-items: center; justify-content: space-between;}
+.adminLayoutBox .adminContent .userBox .box{display: flex; align-items: center; }
+.adminLayoutBox .adminContent .userBox .userImg{margin-right: 9px; width: 20px; height: 20px;}
+.adminLayoutBox .adminContent .userBox .userImg img{display: block; width: 100%;}
+.adminLayoutBox .adminContent .userBox .userText{display: flex; align-items: center; gap: 0 7px;}
+.adminLayoutBox .adminContent .userBox .userText span{font-size: 14px; color: #0c2977;}
+.adminLayoutBox .adminContent .userBox .userText em{font-size: 18px; font-weight: 700; color: #343434;}
+.adminLayoutBox .adminContent .userBox a{display: block; padding: 0 16px; height: 21px; line-height: 19px; font-size: 12px; font-weight: 500; color: #2f2f2f; border-radius: 50px; border: 1px solid #2f2f2f; text-align: center;}
+.adminLayoutBox .adminContent .titleBox{margin-bottom: 20px;}
+.adminLayoutBox .adminContent .titleBox h1{position: relative; display: flex; align-items: center; gap: 0 14px; font-size: 40px; color: #343434; font-weight: 700;}
+.adminLayoutBox .adminContent .titleBox h1.news::before{content: ''; padding: 34px 33px 0 0; background-image: url(../images/common/title_news_icon.png); background-repeat: no-repeat; background-size: 100% auto;}
+.adminLayoutBox .adminContent .inputBox .chk{display: block; margin: 0 auto; position: relative; width: 24px; height: 24px; border: 1px solid #000; background-color: #fff; cursor: pointer;}
+.adminLayoutBox .adminContent .inputBox .chk::before{display: none; content: ''; width: 16px; height: 16px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #212121;}
+.adminLayoutBox .adminContent .inputBox input[type="checkbox"]:checked + label::before{display: block;}
+.adminLayoutBox .adminContent .adminListBox{border-top: 2px solid #151515;}
+.adminLayoutBox .adminContent .adminListBox .adminListTable{width: 100%; table-layout:fixed;}
+.adminLayoutBox .adminContent .adminListBox .adminListTable thead{ height: 61px; border-bottom: 1px solid #151515;}
+.adminLayoutBox .adminContent .adminListBox .adminListTable thead th{font-size: 16px; font-weight: 700; color: #343434;}
+.adminLayoutBox .adminContent .adminListBox .adminListTable tbody td{padding: 18px 10px; font-weight: 500; color: #343434; font-size: 14px; border-bottom: 1px solid #b4b4b4; text-align: center;} 
+.adminLayoutBox .adminContent .adminListBox .adminListTable tbody td .date{font-weight: 400;}
+.adminLayoutBox .adminContent .adminListBox .adminListTable tbody td .file{display: inline-block; padding: 16px 20px 0 0; background-image: url(../images/common/folder_icon.png); background-repeat: no-repeat; background-size: 100% auto;}
+.adminLayoutBox .adminContent .adminListBox .adminListTable tbody td .text{text-align: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.adminLayoutBox .adminContent .adminListBox .adminListTable tbody td .text .notice{margin-right: 8px;font-weight: 700; color: #0c69f4; font-size: 14px;}
+
+/* 관리자-글쓰기 */
+.adminLayoutBox .adminContent .adminWriteBox{border-top: 2px solid #151515;}
+.adminLayoutBox .adminContent .adminWriteBox .adminWriteTable{width: 100%;}
+.adminLayoutBox .adminContent .adminWriteBox .adminWriteTable tbody tr{border-bottom: 1px solid #151515;}
+.adminLayoutBox .adminContent .adminWriteBox .adminWriteTable tbody tr th{padding: 10px 10px 10px 22px; white-space: nowrap; font-size: 16px; font-weight: 700; color: #343434; text-align: left;}
+.adminLayoutBox .adminContent .adminWriteBox .adminWriteTable tbody tr td{padding: 10px 0;}
+.adminLayoutBox .adminContent .adminWriteBox .adminWriteTable .textareaBox textarea{height: 396px;}
+.adminLayoutBox .adminContent .adminWriteBox .adminWriteTable tbody tr.content th{vertical-align: top; padding-top: 20px;}
+.inputTextBox input[type="text"]{width: 100%; padding: 10px 10px 10px 20px; border: 1px solid #afafaf; font-weight: 500; color: #343434; font-size: 14px;}
+.inputTextBox input::placeholder{color: #343434;}
+.textareaBox textarea{width: 100%; padding: 20px; border: 1px solid #afafaf; font-weight: 500; color: #343434; font-size: 14px;}
+.inputFileBox{display: flex; align-items: center;}
+.inputFileBox .fileUpload{padding: 0 0 0 21px; margin-right: 10px; width: 382px; height: 39px; background-color: #e0e0e0; border: 0; font-size: 14px; font-weight: 500; color: #343434;} 
+.inputFileBox label{width: 88px; height: 39px; line-height: 39px; font-weight: 500; color: #fff; font-size: 14px; background-color: #585858; text-align: center; letter-spacing: 1px; cursor: pointer;}
+.inputFileBox .fileDel{display: none; margin-left: 10px; padding: 20px 20px 0 0; background-image: url(../images/common/file_del_icon.png); background-repeat: no-repeat;}
+
+@media (max-width: 1480px){
+
+  .adminLayoutBox .adminContent{padding: 65px 30px 30px 50px;}
+
+}
+
+@media (max-width: 1199px){
+
+  .adminLayoutBox{flex-direction: column;}
+  .adminLayoutBox .adminContent .adminListBox .adminListTable colgroup col:nth-child(1){width: 50px!important;}
+  .adminLayoutBox .adminContent .adminListBox .adminListTable colgroup col:nth-child(2){width: 100px!important;}
+  .adminLayoutBox .adminContent .titleBox h1{font-size: 25px;}
+  .adminLayoutBox .adminContent .titleBox h1.news::before{padding: 29px 26px 0 0;}
+  .adminLayoutBox .adminContent .inputBox .chk{width: 20px; height: 20px;}
+  .adminLayoutBox .adminContent{padding: 50px 20px;}
+  
+  .adminLayoutBox .adminMenu .logo{margin-bottom: 45px; }
+  .adminLayoutBox .adminContent .userBox{margin-bottom: 46px;}
+  .adminLayoutBox .adminMenu .menu .menuList{display: flex; align-items: center; gap: 0 30px;}
+  .adminLayoutBox .adminMenu .menu .menuList li a span{gap: 0 10px;}
+  .adminLayoutBox .adminMenu .menu .menuList li.news a span::before{padding: 25px 21px 0 0;}
+  .adminLayoutBox .adminMenu .menu .menuList li.resources a span::before{padding: 28px 22px 0 0;}
+  .adminLayoutBox .adminMenu{padding: 30px 0 0 20px;}
+  .adminLayoutBox .adminMenu{width: 100%; border-radius: 0 0 30px 30px; box-shadow: 5px 7px 10px rgba(0, 0, 0, .2);}
+  .adminLayoutBox .adminMenu .menu .menuList li a span{font-size: 16px;}
+  .adminLayoutBox .adminMenu .menu .menuList li{margin-bottom: 26px; margin-left: 0!important;}
+
+  .adminLayoutBox .adminContent .userBox .userText em{font-size: 16px;}
+
+}
+
+@media (max-width: 767px){
+
+  .adminLayoutBox .adminContent .titleBox h1{gap: 0 10px; font-size: 22px;}
+  .adminLayoutBox .adminContent .titleBox h1.news::before{padding: 25px 22px 0 0;}
+
+  .inputFileBox .fileUpload{width: calc(50% - -204px);}
+
+}
+
+@media (max-width: 576px){
+
+  .adminLayoutBox .adminContent .adminListBox{overflow-x: auto;}
+  .adminLayoutBox .adminContent .adminListBox .adminListTable{width: 576px;}
+
+  .adminLayoutBox .adminContent .adminWriteBox .adminWriteTable tbody tr th{padding: 17px 10px 10px; text-align: center;}
+  .adminLayoutBox .adminContent .adminWriteBox .adminWriteTable tbody tr th,
+  .adminLayoutBox .adminContent .adminWriteBox .adminWriteTable tbody tr td{display: block; width: 100%;}
+  .inputTextBox input#date{max-width: none!important; width: 100%!important;}
+
+}
+
+@media (max-width: 414px){
+
+  .adminLayoutBox .adminMenu .logo{margin-bottom: 26px; padding: 26px 282px 0 0;}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 관리자-로그인 */
+.adminBox{position: relative; display: flex; margin: 0 auto 50px; border: 1px solid #dfdfdf; border-radius: 25px; background-color: #faf9f9; overflow: hidden; z-index: 1;}
+.adminBox::after{content: ''; width: 860px; height: 100%; position: absolute; top:0; right:0; bottom: 0;  background: url(../images/sub/product_img01.png)no-repeat center; background-size: cover; z-index: -1;}
+.adminBox .adminLoginBox{padding: 206px 20px 0; width: 50%; height: 856px;}
+.adminBox .adminLoginBox .title{margin-bottom: 80px; font-size: 26px; color: #1c1c1c; text-align: center; line-height: 1.6; font-weight: 500;}
+.adminBox .adminLoginBox form{max-width: 460px; width: 100%; margin: 0 auto;}
+.adminBox .adminLoginBox form .inputBox{margin-bottom: 18px;}
+.adminBox .adminLoginBox form .inputBox:last-child{margin-bottom: 0;}
+.adminBox .adminLoginBox form .inputBox input{padding: 0 0 0 59px; width: 100%; height: 72px; border: 1px solid #292929; border-radius: 50px; color: #1c1c1c; font-weight: 500; font-size: 18px;}
+.adminBox .adminLoginBox form .inputBox input::placeholder{color: #1c1c1c;}
+.adminBox .btn{display: block; margin: 69px auto 0; width: 100%; height: 70px; line-height: 70px; text-align: center; color: #fff; font-weight: 700; border-radius: 50px; background-color: #0071ff; font-size: 22px; letter-spacing: 1px;} 
+.adminWrap .logoBox{display: flex; justify-content: flex-end;}
+.adminWrap .logo{padding:  39px 454px 0 0; display: inline-block;  background: url(../images/common/logo.png)no-repeat; background-size: 100% auto;}
+
+@media (max-width: 1199px){
+
+  .adminBox{margin: 0 auto 30px;}
+  .adminBox .adminLoginBox .title{margin-bottom: 60px; font-size: 24px;}
+  .adminWrap .logo{padding: 31px 346px 0 0;}
+  .adminBox{border-radius: 20px;}
+
+}
+
+@media (max-width: 1024px){
+
+  .adminBox::after{opacity: .3;}
+  .adminBox .adminLoginBox{display: flex; flex-direction: column; justify-content: center; padding: 0 20px; width: 100%; height: 630px;}
+  .adminBox .adminLoginBox .title{margin-bottom: 40px; font-size: 20px;}
+  .adminBox .adminLoginBox form .inputBox input{padding: 0 0 0 30px; height: 60px; font-size: 16px;}
+  .adminBox .btn{height: 60px; line-height: 64px; font-size: 18px;}
+  .adminWrap .logo{padding: 26px 285px 0 0;}
+
+}
+
+@media (max-width: 767px){
+
+  .adminBox .adminLoginBox form{max-width: 350px;}
+  .adminBox .adminLoginBox{padding-top: 10px; height: 515px;}
+  .adminBox .adminLoginBox form .inputBox input{height: 50px;}
+  .adminBox .btn{height: 50px; line-height: 54px;}
+  .adminBox .adminLoginBox .title{font-size: 18px;}
+  
+}
+
+@media (max-width: 414px){
+
+  .adminBox .adminLoginBox form{max-width: 100%;}
+  .adminBox::after{background-position-x: 210px;}
+
+}
+
+/* 공통-페이지네이션 */
+.paginationWrap {margin: 50px 0 35px; display: flex; justify-content: center;}
+.paginationWrap .paginationBox{ display: flex; flex-wrap: wrap; gap: 0 12px; align-items: center;}
+.paginationWrap .pageLink{padding: 11px 6px; position: relative; font-size: 16px; color: #333; line-height: 1;}
+.paginationWrap .pageLink.active::after{content: ''; position: absolute; left:0; right:0; bottom: 0; height: 2px; background-color: #333;}
+.paginationWrap .pageLink.active {font-weight: 700;}
+
+@media (max-width: 1199px){
+
+    .paginationWrap{margin: 70px 0 35px; }
+
+}
+
+/* 공통-버튼 */
+.adminBtnBox{margin: 50px 0; display: flex; align-items: center; justify-content: flex-end; gap: 0 10px;}
+.adminBtnBox .btn{display: block; min-width: 90px; padding: 11px 17px; text-align: center; line-height: 1;}
+.adminBtnBox .btn01{ border: 1px solid #2f2f2f; background-color: #f2f2f2; font-size: 15px; font-weight: 500; color: #2f2f2f;}
+.adminBtnBox .btn02{background-color: #000; color: #fff; font-weight: 500; font-size: 15px;}
