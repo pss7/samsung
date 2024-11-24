@@ -1,11 +1,46 @@
 @charset "utf-8";
 
-main{/*margin-top: 111px; */ margin-top: 200px;}
+main{margin-top: 111px;}
+
+@media (max-width: 1199px){
+
+  main{margin-top: 0;}
+
+}
+
+/* 메인 */
+#visualWrap{position: relative;}
+#visualWrap .imgBox{position: relative; height: 1074px;  overflow: hidden;}
+#visualWrap .imgBox.active img{transform: scale(1);}
+#visualWrap .imgBox img{position: absolute; top:0; left: 50%; margin-left: -960px; display: block; width: 1920px; height: 100%; transform: scale(1.5); transition: all 7.5s;}
+#visualWrap .textBox{position: absolute; top:31.3%; left: 14.6%; width: 100%;}
+#visualWrap .textBox h2{ opacity: 0; transform: translateY(60px); margin-bottom: 48px; font-size: 60px; color: #fff; font-weight: 400; text-transform: uppercase; line-height: 1.2; transition: all 2s .5s;}
+#visualWrap .textBox h2 strong{font-weight: 700;}
+#visualWrap .textBox p{ opacity: 0; transform: translateY(60px); color: #fff; text-transform: uppercase; transition: all 2s .6s;}
+#visualWrap .textBox.active h2,
+#visualWrap .textBox.active p{opacity: 1; transform: translateY(0);}
+
+@media (max-width: 1199px){
+
+  #visualWrap .imgBox{height: 100vh;}
+  #visualWrap .imgBox img{object-fit: cover;}
+  #visualWrap .textBox h2{margin-bottom: 30px; font-size: 45px;}
+  #visualWrap .textBox{top: 25%; left: 6%;}
+
+}
+
+@media (max-width: 767px){
+
+  #visualWrap .textBox{top: 20%; left: 0; padding: 0 20px;}
+  #visualWrap .textBox h2{font-size: 40px;}
+  #visualWrap .textBox p{font-size: 14px;}
+
+}
 
 /* 제품 */
 #productWrap{margin: 95px 0 0 80px; position: relative; /*height: 1080px;*/ padding: 0 0 76px 0; overflow: hidden; background-color: #222;}
 #productWrap .productBg{position: absolute; top:0; left:0; bottom: 0; width: 759px; overflow: hidden;}
-#productWrap .productBg img{display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.6); transition: all 2s;}
+#productWrap .productBg img{display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.6); transition: all 3s;}
 #productWrap.active .productBg img{transform: scale(1);}
 #productWrap .titleBox{padding: 216px 0 0 880px; margin-bottom: 50px;}
 #productWrap .titleBox h3{margin-bottom: 15px; font-size: 70px; font-weight: 700; color: #fff;}
@@ -90,7 +125,7 @@ main{/*margin-top: 111px; */ margin-top: 200px;}
 
 @media (max-width: 767px){
 
-  #productWrap{padding: 55px 0 55px 20px;}
+  #productWrap{margin: 57px 0 0; padding: 55px 0 55px 20px;}
   #productWrap .titleBox h3{font-size: 25px;}
   #productWrap .titleBox .productTab li a{font-size: 14px;}
   #productWrap .titleBox .productTab li a.active{padding-left: 13px;}

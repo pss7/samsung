@@ -1,29 +1,42 @@
 $(function () {
 
+  const mainSwiper = new Swiper('#visualWrap .swiper-container', {
+    loop: true,
+    slidesPerView: 'auto',
+    speed: 1300,
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
+
+    on: {
+      init: function () {
+        $('#visualWrap .textBox').eq(this.activeIndex).addClass('active');
+        $('#visualWrap .imgBox').eq(this.activeIndex).addClass('active');
+      },
+      slideChange: function () {
+        $('#visualWrap .textBox').addClass('active');
+        $('#visualWrap .textBox').removeClass('active');
+        $('#visualWrap .textBox').eq(this.activeIndex).addClass('active');
+
+        $('#visualWrap .imgBox').addClass('active');
+        $('#visualWrap .imgBox').removeClass('active');
+        $('#visualWrap .imgBox').eq(this.activeIndex).addClass('active');
+      }
+    },
+
+  });
+
   /* aos */
   $(window).load(function () {
     AOS.init({
-      duration: 1500
+      duration: 2500
     });
   });
 
-  const swiper = new Swiper('.swiper-container', {
+  const swiper = new Swiper('#productWrap .swiper-container', {
     loop: true,
     slidesPerView: 'auto',
-
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-
     on: {
       slideChange: function () {
         $('.productTab a').removeClass('active');
