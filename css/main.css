@@ -13,7 +13,7 @@ main{margin-top: 111px;}
 #visualWrap .imgBox{position: relative; height: 1074px;  overflow: hidden;}
 #visualWrap .imgBox.active img{transform: scale(1);}
 #visualWrap .imgBox img{position: absolute; top:0; left: 50%; margin-left: -960px; display: block; width: 1920px; height: 100%; transform: scale(1.5); transition: all 7.5s;}
-#visualWrap .textBox{position: absolute; top:31.3%; left: 14.6%; width: 100%;}
+#visualWrap .textBox{position: absolute; top:21.2%; left: 14.6%; width: 100%;}
 #visualWrap .textBox h2{ opacity: 0; transform: translateY(60px); margin-bottom: 48px; font-size: 60px; color: #fff; font-weight: 400; text-transform: uppercase; line-height: 1.2; transition: all 2s .5s;}
 #visualWrap .textBox h2 strong{font-weight: 700;}
 #visualWrap .textBox p{ opacity: 0; transform: translateY(60px); color: #fff; text-transform: uppercase; transition: all 2s .6s;}
