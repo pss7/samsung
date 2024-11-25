@@ -386,10 +386,11 @@ main{margin-top: 111px; min-height: 500px;}
 .productWrap .productTabContent .infoText .productList01 li h3 a{position: relative; display: block; padding: 16px 0; font-weight: 700; color: #000; background-color: #fff;}
 .productWrap .productTabContent .infoText .productList01 li h3 a::after{content: ''; padding: 12px 20px 0 0; position: absolute; top: 50%; transform: translateY(-50%); right:21px; background-image: url(../images/sub/arrow_icon03.png); background-size: 100% auto; background-repeat: no-repeat;}
 .productWrap .productTabContent .infoText .productList01 li h3.active a::after{transform: translateY(-50%) rotate(180deg); background-image: url(../images/sub/arrow_icon04.png);}
-.productWrap .productTabContent .infoText .productList01 li .productTable{display: none; width: 100%;}
+.productWrap .productTabContent .infoText .productList01 li h3.active + .productTable{display: block;}
+.productWrap .productTabContent .infoText .productList01 li .productTable{margin-bottom: -1px; display: none; width: 100%;}
 .productWrap .productTabContent .infoText .productList01 li .productTable tbody tr th,
 .productWrap .productTabContent .infoText .productList01 li .productTable tbody tr td{font-family: 'SpoqaHanSansNeo', sans-serif; border: 1px solid #b5b5b5; border-width: 1px 0;}
-.productWrap .productTabContent .infoText .productList01 li .productTable tbody tr th{padding: 17px 0 18px 24px; background-color: #f7f7f7; color: #000;}
+.productWrap .productTabContent .infoText .productList01 li .productTable tbody tr th{padding: 17px 10px 18px 24px; background-color: #f7f7f7; color: #000; word-break: keep-all;}
 .productWrap .productTabContent .infoText .productList01 li .productTable tbody tr td{padding: 17px 0 18px 21px; font-weight: 300; color: #000; background-color: #fff;}
 .productWrap .productTabContent .infoText .top{position: relative;}
 .productWrap .productTabContent .infoText .top .titleBox em{margin-bottom: 12px; padding: 0 0 0 19px; display: block; width: 178px; height: 38px; line-height: 40px; border-radius: 15px 0 0 0; background-color: #0c69f4; color: #fff; font-weight: 700; font-size: 34px;}
