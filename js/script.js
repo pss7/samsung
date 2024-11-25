@@ -12,19 +12,19 @@ $(function () {
     $('#header .depth01 li h2 a').parent().removeClass('active');
   });
 
-  $(window).load(function(){
-
+  $(window).load(function () {
     $('#header').addClass('active');
     $('.subTopText').addClass('active');
     $('.subTitleBox .subTopImg').addClass('active')
-
   });
 
-
-
-
-
-
-
+  $('#header .munuBtn').click(function () {
+    $('#header .menuWrap').addClass('active');
+    $('body').addClass('fixed');
+  });
+  $('#header .closeBtn').click(function () {
+    $('#header .menuWrap').removeClass('active');
+    $('body').removeClass('fixed');
+  });
 
 });
