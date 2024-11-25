@@ -38,6 +38,7 @@ $(function () {
     if ($(this).parent().hasClass('active')) {
       $(this).parent().removeClass('active');
     } else {
+      $('.productWrap .productList01 li h3 a').parent().removeClass('active');
       $(this).parent().addClass('active');
     }
 

@@ -385,7 +385,7 @@ main{margin-top: 111px; min-height: 500px;}
 .productWrap .productTabContent .infoText .productList01 li{border-bottom: 1px solid #b5b5b5;}
 .productWrap .productTabContent .infoText .productList01 li h3 a{position: relative; display: block; padding: 16px 0; font-weight: 700; color: #000; background-color: #fff;}
 .productWrap .productTabContent .infoText .productList01 li h3 a::after{content: ''; padding: 12px 20px 0 0; position: absolute; top: 50%; transform: translateY(-50%); right:21px; background-image: url(../images/sub/arrow_icon03.png); background-size: 100% auto; background-repeat: no-repeat;}
-.productWrap .productTabContent .infoText .productList01 li h3.active a::after{transform: translateY(-50%) rotate(180deg); background-image: url(../images/sub/arrow_icon04.png);}
+.productWrap .productTabContent .infoText .productList01 li h3.active a::after{background-image: url(../images/sub/arrow_icon04.png);}
 .productWrap .productTabContent .infoText .productList01 li h3.active + .productTable{display: block;}
 .productWrap .productTabContent .infoText .productList01 li .productTable{margin-bottom: -1px; display: none; width: 100%;}
 .productWrap .productTabContent .infoText .productList01 li .productTable tbody tr th,
