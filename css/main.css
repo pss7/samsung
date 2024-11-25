@@ -19,9 +19,17 @@ main{margin-top: 111px;}
 #visualWrap .textBox p{ opacity: 0; transform: translateY(60px); color: #fff; text-transform: uppercase; transition: all 2s .6s;}
 #visualWrap .textBox.active h2,
 #visualWrap .textBox.active p{opacity: 1; transform: translateY(0);}
+#visualWrap .control{position: absolute; top:50%; right:8.41%; transform: translateY(-50%);  z-index: 9999;} 
+#visualWrap .control .circleProgress .bg{position:absolute; width:224px; height:224px; border-radius:50%; border:.3px solid rgba(255,255,255,.5)}
+#visualWrap .control .circleProgress{width: 224px; height: 224px; --progress: 1;}
+#visualWrap .control .circleProgress svg {position: absolute; top:0; right: 0; bottom: 0; left: 0; transform: rotate(-90deg);}
+#visualWrap .control .circleProgress svg circle{fill: none; stroke: #fff; stroke-width: 1px; stroke-dasharray: 703.72;
+  stroke-dashoffset: calc(703.72 * var(--progress)); transition: stroke-dashoffset 0.4s ;}
+#visualWrap .control .nextBtn{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; color: #fff; white-space: nowrap;}
 
 @media (max-width: 1199px){
 
+  #visualWrap .control{top: auto; transform: none; right: auto; bottom: 50px; left: 6%;}
   #visualWrap .imgBox{height: 100vh;}
   #visualWrap .imgBox img{object-fit: cover;}
   #visualWrap .textBox h2{margin-bottom: 30px; font-size: 45px;}
@@ -34,6 +42,8 @@ main{margin-top: 111px;}
   #visualWrap .textBox{top: 20%; left: 0; padding: 0 20px;}
   #visualWrap .textBox h2{font-size: 40px;}
   #visualWrap .textBox p{font-size: 14px;}
+  #visualWrap .control .circleProgress,
+  #visualWrap .control .circleProgress .bg{width: 150px; height: 150px;}
 
 }
 

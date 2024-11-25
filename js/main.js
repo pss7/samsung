@@ -1,5 +1,7 @@
 $(function () {
 
+  const progressCircleContainer = document.querySelector("#visualWrap .circleProgress");
+
   const mainSwiper = new Swiper('#visualWrap .swiper-container', {
     loop: true,
     slidesPerView: 'auto',
@@ -8,7 +10,9 @@ $(function () {
       delay: 8000,
       disableOnInteraction: false,
     },
-
+    navigation: {
+      nextEl: '#visualWrap .nextBtn',
+    },
     on: {
       init: function () {
         $('#visualWrap .textBox').eq(this.activeIndex).addClass('active');
@@ -18,15 +22,34 @@ $(function () {
         $('#visualWrap .textBox').addClass('active');
         $('#visualWrap .textBox').removeClass('active');
         $('#visualWrap .textBox').eq(this.activeIndex).addClass('active');
-
+    
         $('#visualWrap .imgBox').addClass('active');
         $('#visualWrap .imgBox').removeClass('active');
         $('#visualWrap .imgBox').eq(this.activeIndex).addClass('active');
+      },
+      autoplayTimeLeft(s, time, progress) {
+              if (progressCircleContainer) {
+          progressCircleContainer.style.setProperty("--progress", progress);  // progress 값을 --progress로 설정
+        }
       }
     },
-
   });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   /* aos */
   $(window).load(function () {
     AOS.init({
