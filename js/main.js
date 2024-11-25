@@ -11,7 +11,7 @@ $(function () {
       disableOnInteraction: false,
     },
     navigation: {
-      nextEl: '#visualWrap .nextBtn',
+      nextEl: '#visualWrap .nextBtn', // Next 버튼 선택자
     },
     on: {
       init: function () {
@@ -34,21 +34,6 @@ $(function () {
       }
     },
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
   /* aos */
   $(window).load(function () {

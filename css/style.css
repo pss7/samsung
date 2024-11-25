@@ -26,7 +26,7 @@ body.fixed{position: fixed;}
 #header .menuBox nav .depth02 li h3 a:hover{text-decoration: underline;} 
 #header .menuBox{display: flex; align-items: center; flex-shrink: 0;}
 #header .menuWrap.active{top: 0;}
-#header .menuWrap{position: fixed; top:-1000px; left:0; right:0; height: 100%; background-color: #fff; overflow-y: auto; transition: all .5s;}
+#header .menuWrap{position: fixed; top:-3000px; left:0; right:0; height: 100%; background-color: #fff; overflow-y: auto; transition: all .5s;}
 #header .menuWrap .menuHeader{margin-bottom: 88px; display: flex; align-items: center; justify-content: flex-end; height: 80px; border-bottom: 1px solid #000;}
 #header .menuWrap .menuHeader .info{margin:3px 35px 0 0; display: flex; align-items: center; gap: 0 38px;}
 #header .menuWrap .menuHeader .info li{position: relative; display: flex; align-items: center; gap: 0 10px;}
@@ -44,14 +44,6 @@ body.fixed{position: fixed;}
 #header .menuWrap.active nav .menuDepth01 > li:nth-child(4){transition-delay: .6s;}
 #header .menuWrap.active nav .menuDepth01 > li:nth-child(5){transition-delay: .7s;}
 #header .menuWrap.active nav .menuDepth01 > li:nth-child(6){transition-delay: .8s;}
-
-
-
-
-
-
-
-
 #header .menuWrap nav .menuDepth01 li h2 a{display: block; font-weight: 700; color: #c1c1c1; font-size: 40px; text-align: center; transition: all .3s;}
 #header .menuWrap nav .menuDepth01 li h2 a:hover{color: #232323; font-weight: 700;}
 #header .menuWrap nav .menuDepth02{padding: 16px 0 0;}
@@ -97,8 +89,7 @@ body.fixed{position: fixed;}
 
 @media (max-width: 576px){
 
-  #header .menuWrap .menuHeader{height: 70px;}
-  #header .menuWrap .menuHeader{padding:0 20px; justify-content: space-between;}
+  #header .menuWrap .menuHeader{height: auto; padding: 15px 20px; justify-content: space-between;}
   #header .menuWrap .menuHeader .info{flex-direction: column; gap: 10px 0; align-items: flex-start;} 
   #header .menuWrap .menuHeader .btnBox .closeBtn{width: 45px; height: 45px;}
   #header .menuWrap .menuHeader .btnBox .closeBtn::after{padding: 22px 22px 0 0;}
