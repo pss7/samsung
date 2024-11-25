@@ -368,12 +368,6 @@ main{margin-top: 111px; min-height: 500px;}
 .productWrap .productTab li a .text{position: absolute; top:18px; left:-36px; width: 127px; height: 30px; line-height: 30px; border: 1px solid #bcbcbc; text-align: center; font-weight: 500; color: #282828; background-color: #fff;}
 .productWrap .productTab li a .text span{font-size: 16px; font-weight: 400;}
 .productWrap .productTab li a.active .text{background-color: #0c69f4; color: #fff; border: 0;}
-
-
-
-
-
-
 .productWrap .productTabContent .productLayoutBox{display: flex; gap: 0 60px;}
 .productWrap .productTabContent{position: relative; padding: 80px 0 0; z-index: 1;}
 .productWrap .productTabContent::after{content: ''; position: absolute; top:0; left:0; right:0; height: 396px; background-color: #f7f7f8; z-index: -1;}
