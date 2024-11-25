@@ -360,7 +360,6 @@ main{margin-top: 111px; min-height: 500px;}
 
 
 .productWrap .productTab{max-width: 1860px; width: 100%; padding: 0 20px; margin-bottom: 76px; display: flex; justify-content: center; gap: 0 7%;}
-.productWrap .productTab li{}
 .productWrap .productTab li a{ display: flex; gap: 0 23px;}
 .productWrap .productTab li a .imgBox img{display: block;}
 .productWrap .productTab li a .textBox{padding-top: 58px; position: relative;}
@@ -431,7 +430,6 @@ main{margin-top: 111px; min-height: 500px;}
   .productWrap .productTabContent .imgBox{width: 100%;}
   .productWrap .productTabContent .infoText{margin: 40px 0 0;}
   .productWrap .productTabContent .infoText .top .titleBox em{margin-bottom: 20px;}
-  .productWrap .productTabContent .infoText .top .titleBox .box{}
   .productWrap .productTabContent .infoText .top{margin-bottom: 30px;}
   .productWrap .productTabContent .infoText .downLoad{position: relative; display: block;}
   .productWrap .tab li a{width: 100%; font-size: 14px;}
