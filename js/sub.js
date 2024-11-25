@@ -107,8 +107,49 @@ $(function () {
     return false
   });
 
+  $('.productContent01').hide();
+  $('.productContent01').first().show();
 
+  $('.productTab01 li').click(function () {
+    $('.productTab01 li').children().removeClass('active');
+    $(this).children().addClass('active');
 
+    var Idx = $(this).index();
 
+    $('.productContent01').hide();
+    $('.productContent01').eq(Idx).show();
+
+    return false;
+  });
+
+  $('.productContent02').hide();
+  $('.productContent02').first().show();
+
+  $('.productTab02 li').click(function () {
+    $('.productTab02 li').children().removeClass('active');
+    $(this).children().addClass('active');
+
+    var Idx = $(this).index();
+
+    $('.productContent02').hide();
+    $('.productContent02').eq(Idx).show();
+
+    return false;
+  });
+
+  $('.productContent03').hide();
+  $('.productContent03').first().show();
+
+  $('.productTab03 li').click(function () {
+    $('.productTab03 li').children().removeClass('active');
+    $(this).children().addClass('active');
+
+    var Idx = $(this).index();
+
+    $('.productContent03').hide();
+    $('.productContent03').eq(Idx).show();
+
+    return false;
+  });
 
 });
