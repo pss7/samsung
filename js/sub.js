@@ -367,6 +367,23 @@ $(function () {
       nextEl: '.solutionsWrap .popup01 .nextBtn',
       prevEl: '.solutionsWrap .popup01 .prevBtn',
     },
+    on: {
+      init: function () {
+        const totalSlides = this.slides.length;
+        const currentSlide = this.activeIndex + 1;
+        document.querySelector('.solutionsWrap .popup01 .totalSlide').textContent = totalSlides;
+        document.querySelector('.solutionsWrap .popup01 .currentSlide').textContent = currentSlide;
+      },
+      slideChange: function () {
+        const currentSlide = this.activeIndex + 1;
+        document.querySelector('.solutionsWrap .popup01 .currentSlide').textContent = currentSlide;
+      },
+    }
+  });
+
+  $('.popup .closeBtn').click(function () {
+    $('.popup').hide();
+    $('.bg').hide();
   });
 
 });

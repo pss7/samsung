@@ -329,6 +329,9 @@ main{margin-top: 111px; min-height: 500px;}
 .solutionsWrap .popup .control .closeBtn{position: relative; display: block; width: 50px; height: 50px; border: 1px solid #fff;}
 .solutionsWrap .popup .control .closeBtn::after{content: ''; padding: 20px 20px 0 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/common/close_icon02.png); background-repeat: no-repeat; background-size: 100% auto; }
 .solutionsWrap .bg{position: fixed; top:0; left:0; right:0; bottom: 0; background-color: rgba(0,0,0, 87%); z-index: 999;}
+.solutionsWrap .popup .control .count{margin-right: 17px; font-size: 22px; color: #fff;}
+.solutionsWrap .popup .control .count span{}
+.solutionsWrap .popup .control .count .currentSlide{font-weight: 500;}
 
 @media (max-width: 1199px){
 
@@ -348,8 +351,10 @@ main{margin-top: 111px; min-height: 500px;}
   .solutionsWrap .casesBox .casesRight .casesSlide a .textBox h4{font-size: 20px;}
 
   .solutionsWrap .popup .control{top: 55px;}
+  .solutionsWrap .popup .control .count{margin-right: 10px; font-size: 20px;}
   .solutionsWrap .popup h4{margin-bottom: 7px; font-size: 32px;}
   .solutionsWrap .popup p{margin-bottom: 22px;}
+ 
 
 }
 
@@ -375,7 +380,8 @@ main{margin-top: 111px; min-height: 500px;}
   .solutionsWrap .popup .control .nextBtn::before{padding: 16px 9px 0 0;}
   .solutionsWrap .popup .control .closeBtn{width: 40px; height: 40px;}
   .solutionsWrap .popup .control .closeBtn::after{padding: 15px 15px 0 0;}
-  
+  .solutionsWrap .popup .control .count{margin-right: 10px; font-size: 18px;}
+
 }
 
 @media (max-width: 414px){
