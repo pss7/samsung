@@ -352,12 +352,13 @@ $(function () {
   });
 
 
-  $('.searchBox .search > a').click(function(){
-    if($(this).hasClass('active')){
+  $('.searchBox .search > a').click(function () {
+    if ($(this).hasClass('active')) {
       $(this).removeClass('active');
-    }else{
+    } else {
       $(this).addClass('active');
     }
+    return false;
   });
 
 });

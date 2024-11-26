@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body.fixed{position: fixed;}
+body.of{overflow: hidden;}
 
 /* 가운데영역 */
 .container{max-width: 1800px; margin: 0 auto; padding: 0 20px;}

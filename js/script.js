@@ -20,11 +20,11 @@ $(function () {
 
   $('#header .munuBtn').click(function () {
     $('#header .menuWrap').addClass('active');
-    $('body').addClass('fixed');
+    $('body').addClass('of');
   });
   $('#header .closeBtn').click(function () {
     $('#header .menuWrap').removeClass('active');
-    $('body').removeClass('fixed');
+    $('body').removeClass('of');
   });
 
 });
