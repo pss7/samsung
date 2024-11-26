@@ -360,6 +360,7 @@ $(function () {
     return false;
   });
 
+  /* 팝업 */
   function initializePopupSwiper(popupClass) {
     return new Swiper(`${popupClass} .swiper-container`, {
       observer: true, // DOM 변경 감지 활성화
@@ -372,61 +373,79 @@ $(function () {
       },
       on: {
         init: function () {
-          this.update();  // swiper.update()로 swiper 인스턴스 갱신
-  
-          const totalSlides = this.slides.length - this.loopedSlides; // loopedSlides 고려
-          const currentSlide = this.activeIndex + 1;  // 슬라이드는 0부터 시작하므로 +1을 해줍니다.
-  
-          document.querySelector(`${popupClass} .totalSlide`).textContent = totalSlides;
-          document.querySelector(`${popupClass} .currentSlide`).textContent = currentSlide;
+          this.update();
+          setTimeout(() => {
+
+            const totalSlides = this.wrapperEl.children.length;
+            const currentSlide = this.activeIndex + 1;
+
+            if (!isNaN(totalSlides) && totalSlides > 0) {
+              const totalSlideElement = document.querySelector(`${popupClass} .totalSlide`);
+              if (totalSlideElement) {
+                totalSlideElement.textContent = totalSlides;
+              }
+            } else {
+              console.error("총 슬라이드 수가 0입니다. 슬라이드가 올바르게 로드되지 않았습니다.");
+            }
+
+            if (!isNaN(currentSlide)) {
+              const currentSlideElement = document.querySelector(`${popupClass} .currentSlide`);
+              if (currentSlideElement) {
+                currentSlideElement.textContent = currentSlide;
+              }
+            }
+          }, 100);
         },
         slideChange: function () {
           const currentSlide = this.activeIndex + 1;
-          document.querySelector(`${popupClass} .currentSlide`).textContent = currentSlide;
+          const currentSlideElement = document.querySelector(`${popupClass} .currentSlide`);
+          if (currentSlideElement && !isNaN(currentSlide)) {
+            currentSlideElement.textContent = currentSlide;
+          } else {
+            console.error("슬라이드 변경 시 현재 슬라이드 인덱스 오류");
+          }
         },
       }
     });
   }
-  
-  // 팝업 1부터 6까지 초기화
+
   const popupSwiper01 = initializePopupSwiper('.solutionsWrap .popup01');
   const popupSwiper02 = initializePopupSwiper('.solutionsWrap .popup02');
   const popupSwiper03 = initializePopupSwiper('.solutionsWrap .popup03');
   const popupSwiper04 = initializePopupSwiper('.solutionsWrap .popup04');
   const popupSwiper05 = initializePopupSwiper('.solutionsWrap .popup05');
   const popupSwiper06 = initializePopupSwiper('.solutionsWrap .popup06');
-  
-  // 팝업 열기 및 닫기 동작
+
   $('.popupClick01').click(function () {
     $('.solutionsWrap .popup01').show();
     $('.solutionsWrap .bg').show();
   });
-  
+
   $('.popupClick02').click(function () {
     $('.solutionsWrap .popup02').show();
     $('.solutionsWrap .bg').show();
   });
-  
+
   $('.popupClick03').click(function () {
     $('.solutionsWrap .popup03').show();
     $('.solutionsWrap .bg').show();
   });
-  
+
   $('.popupClick04').click(function () {
     $('.solutionsWrap .popup04').show();
     $('.solutionsWrap .bg').show();
   });
-  
+
   $('.popupClick05').click(function () {
     $('.solutionsWrap .popup05').show();
     $('.solutionsWrap .bg').show();
   });
-  
+
   $('.popupClick06').click(function () {
     $('.solutionsWrap .popup06').show();
     $('.solutionsWrap .bg').show();
   });
-  
+
   $('.popup .closeBtn').click(function () {
     $('.popup').hide();
     $('.solutionsWrap .bg').hide();
@@ -436,5 +455,5 @@ $(function () {
     $('.popup').hide();
     $('.solutionsWrap .bg').hide();
   });
-  
+
 });
