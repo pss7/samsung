@@ -351,7 +351,6 @@ $(function () {
     return false;
   });
 
-
   $('.searchBox .search > a').click(function () {
     if ($(this).hasClass('active')) {
       $(this).removeClass('active');
@@ -359,6 +358,15 @@ $(function () {
       $(this).addClass('active');
     }
     return false;
+  });
+
+  const popupSwiper = new Swiper('.solutionsWrap .popup01 .swiper-container', {
+    loop: false,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.solutionsWrap .popup01 .nextBtn',
+      prevEl: '.solutionsWrap .popup01 .prevBtn',
+    },
   });
 
 });
