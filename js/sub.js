@@ -360,30 +360,75 @@ $(function () {
     return false;
   });
 
-  const popupSwiper = new Swiper('.solutionsWrap .popup01 .swiper-container', {
-    loop: false,
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.solutionsWrap .popup01 .nextBtn',
-      prevEl: '.solutionsWrap .popup01 .prevBtn',
-    },
-    on: {
-      init: function () {
-        const totalSlides = this.slides.length;
-        const currentSlide = this.activeIndex + 1;
-        document.querySelector('.solutionsWrap .popup01 .totalSlide').textContent = totalSlides;
-        document.querySelector('.solutionsWrap .popup01 .currentSlide').textContent = currentSlide;
+  function initializePopupSwiper(popupClass) {
+    return new Swiper(`${popupClass} .swiper-container`, {
+      loop: false,  // Loop을 사용할 때 슬라이드 갯수가 왜곡될 수 있습니다.
+      slidesPerView: 1,
+      navigation: {
+        nextEl: `${popupClass} .nextBtn`,
+        prevEl: `${popupClass} .prevBtn`,
       },
-      slideChange: function () {
-        const currentSlide = this.activeIndex + 1;
-        document.querySelector('.solutionsWrap .popup01 .currentSlide').textContent = currentSlide;
-      },
-    }
+      on: {
+        init: function () {
+          this.update();  // swiper.update()로 swiper 인스턴스 갱신
+  
+          const totalSlides = this.slides.length - this.loopedSlides; // loopedSlides 고려
+          const currentSlide = this.activeIndex + 1;  // 슬라이드는 0부터 시작하므로 +1을 해줍니다.
+  
+          document.querySelector(`${popupClass} .totalSlide`).textContent = totalSlides;
+          document.querySelector(`${popupClass} .currentSlide`).textContent = currentSlide;
+        },
+        slideChange: function () {
+          const currentSlide = this.activeIndex + 1;
+          document.querySelector(`${popupClass} .currentSlide`).textContent = currentSlide;
+        },
+      }
+    });
+  }
+  
+  // 팝업 1부터 6까지 초기화
+  const popupSwiper01 = initializePopupSwiper('.solutionsWrap .popup01');
+  const popupSwiper02 = initializePopupSwiper('.solutionsWrap .popup02');
+  const popupSwiper03 = initializePopupSwiper('.solutionsWrap .popup03');
+  const popupSwiper04 = initializePopupSwiper('.solutionsWrap .popup04');
+  const popupSwiper05 = initializePopupSwiper('.solutionsWrap .popup05');
+  const popupSwiper06 = initializePopupSwiper('.solutionsWrap .popup06');
+  
+  // 팝업 열기 및 닫기 동작
+  $('.popupClick01').click(function () {
+    $('.solutionsWrap .popup01').show();
+    $('.bg').show();
   });
-
+  
+  $('.popupClick02').click(function () {
+    $('.solutionsWrap .popup02').show();
+    $('.bg').show();
+  });
+  
+  $('.popupClick03').click(function () {
+    $('.solutionsWrap .popup03').show();
+    $('.bg').show();
+  });
+  
+  $('.popupClick04').click(function () {
+    $('.solutionsWrap .popup04').show();
+    $('.bg').show();
+  });
+  
+  $('.popupClick05').click(function () {
+    $('.solutionsWrap .popup05').show();
+    $('.bg').show();
+  });
+  
+  $('.popupClick06').click(function () {
+    $('.solutionsWrap .popup06').show();
+    $('.bg').show();
+  });
+  
   $('.popup .closeBtn').click(function () {
     $('.popup').hide();
     $('.bg').hide();
   });
+  
 
 });
