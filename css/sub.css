@@ -315,7 +315,6 @@ main{margin-top: 111px; min-height: 500px;}
 .solutionsWrap .casesBox .casesRight .casesSlide a .textBox h4{margin-bottom: 6px; font-size: 24px; color: #000;}
 .solutionsWrap .casesBox .casesRight .casesSlide a .textBox p{color: #000;}
 .solutionsWrap .popup{max-width: 1170px; width: 100%; max-height: calc(100% - -13px); padding: 20px; position: fixed; top:50%; left:50%; transform: translate(-50%, -50%); z-index: 99999; overflow-y: auto;}
-.solutionsWrap .popup .box{}
 .solutionsWrap .popup h4{margin-bottom: 12px; font-weight: 700; color: #fff; font-size: 36px;}
 .solutionsWrap .popup p{margin-bottom: 32px; font-weight: 500; color: #fff;}
 .solutionsWrap .popup .imgBox{position: relative; width: 100%; height: 0; padding-top: 67.4%; }
