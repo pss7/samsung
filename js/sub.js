@@ -399,38 +399,42 @@ $(function () {
   // 팝업 열기 및 닫기 동작
   $('.popupClick01').click(function () {
     $('.solutionsWrap .popup01').show();
-    $('.bg').show();
+    $('.solutionsWrap .bg').show();
   });
   
   $('.popupClick02').click(function () {
     $('.solutionsWrap .popup02').show();
-    $('.bg').show();
+    $('.solutionsWrap .bg').show();
   });
   
   $('.popupClick03').click(function () {
     $('.solutionsWrap .popup03').show();
-    $('.bg').show();
+    $('.solutionsWrap .bg').show();
   });
   
   $('.popupClick04').click(function () {
     $('.solutionsWrap .popup04').show();
-    $('.bg').show();
+    $('.solutionsWrap .bg').show();
   });
   
   $('.popupClick05').click(function () {
     $('.solutionsWrap .popup05').show();
-    $('.bg').show();
+    $('.solutionsWrap .bg').show();
   });
   
   $('.popupClick06').click(function () {
     $('.solutionsWrap .popup06').show();
-    $('.bg').show();
+    $('.solutionsWrap .bg').show();
   });
   
   $('.popup .closeBtn').click(function () {
     $('.popup').hide();
-    $('.bg').hide();
+    $('.solutionsWrap .bg').hide();
+  });
+
+  $('.solutionsWrap .bg').click(function () {
+    $('.popup').hide();
+    $('.solutionsWrap .bg').hide();
   });
   
-
 });
