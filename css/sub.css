@@ -121,14 +121,16 @@ main{margin-top: 111px; min-height: 500px;}
 /* 공통-검색 */
 .searchBox{position: relative; margin-bottom: 37px; width: 472px; display: flex; justify-self: flex-end; align-items: center;  border-bottom: 3px solid #323231;}
 .searchBox .search{position: relative;}
-.searchBox .search .view{display: none; top: 41px; padding: 16px 5px; position: absolute; left:0; right:0; border: 1px solid #272727; background-color: #fff;}
+.searchBox .search .view{display: none; top: 41px; padding: 16px 5px; position: absolute; left:0; right:0; border: 1px solid #272727; background-color: #fff; z-index: 99;}
 .searchBox .search .view li a{display: block; font-size: 13px; color: #000; text-align: center;} 
+.searchBox .search .view li a:hover{text-decoration: underline;}
 .searchBox .search .view li{margin-bottom: 20px;}
 .searchBox .search .view li:last-child{margin-bottom: 0;}
 .searchBox .inputBox{position: relative; width: 100%;}
 .searchBox .inputBox .searchBtn{width: 18px; height: 18px; position: absolute; top: 50%; transform: translateY(-50%); right: 5px; background: url(../images/sub/search_icon.png)no-repeat center; background-size: cover;}
 .searchBox .inputBox input{width: 100%; height: 48px; padding: 0 31px 0 20px; font-size: 15px; color: #2a2929; border: 0; background-color: transparent;}
 .searchBox .inputBox input::placeholder{color: #2a2929;}
+.searchBox .search > a.active + .view{display: block;}
 .searchBox .search > a{display: flex; align-items: center; height: 48px; padding: 0 0 0 10px; position: relative;  width: 113px; font-weight: 700; font-family: 'SpoqaHanSansNeo', sans-serif; color: #2a2929;}
 .searchBox .search > a::after{content: ''; width: 12px; height: 8px; position: absolute; right: 12px; top:50%; transform: translateY(-50%); background: url(../images/sub/arrow_icon01.png)no-repeat center; background-size: cover;}
 .searchBox .search > a.active::after{transform: translateY(-50%) rotate(-180deg);}

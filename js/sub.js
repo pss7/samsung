@@ -351,4 +351,13 @@ $(function () {
     return false;
   });
 
+
+  $('.searchBox .search > a').click(function(){
+    if($(this).hasClass('active')){
+      $(this).removeClass('active');
+    }else{
+      $(this).addClass('active');
+    }
+  });
+
 });
