@@ -1,16 +1,5 @@
 $(function () {
 
-  const swiper01 = new Swiper('.solutionsWrap .swiper-container', {
-    loop: false,
-    slidesPerView: 'auto',
-    breakpoints: {
-      414: {
-        centeredSlides: true,
-        slidesPerView: '1',
-      },
-    }
-  });
-
   /* 제품 */
   const swiper02 = new Swiper('.productSlide01 .swiper-container', {
     loop: false,
@@ -363,52 +352,58 @@ $(function () {
   /* 팝업 */
   function initializePopupSwiper(popupClass) {
     return new Swiper(`${popupClass} .swiper-container`, {
-      observer: true, // DOM 변경 감지 활성화
-      observeParents: true, // 부모 요소의 변경 감지 활성화
-      loop: false,  // Loop을 사용할 때 슬라이드 갯수가 왜곡될 수 있습니다.
-      slidesPerView: 1,
+      observer: true,
+      observeParents: true,
+      loop: true,  // 루프 비활성화
+      slidesPerView: 'auto',
       navigation: {
         nextEl: `${popupClass} .nextBtn`,
         prevEl: `${popupClass} .prevBtn`,
       },
       on: {
         init: function () {
-          this.update();
+          this.update();  // swiper 인스턴스 갱신
           setTimeout(() => {
-
-            const totalSlides = this.wrapperEl.children.length;
-            const currentSlide = this.activeIndex + 1;
-
-            if (!isNaN(totalSlides) && totalSlides > 0) {
-              const totalSlideElement = document.querySelector(`${popupClass} .totalSlide`);
-              if (totalSlideElement) {
-                totalSlideElement.textContent = totalSlides;
-              }
-            } else {
-              console.error("총 슬라이드 수가 0입니다. 슬라이드가 올바르게 로드되지 않았습니다.");
-            }
-
-            if (!isNaN(currentSlide)) {
-              const currentSlideElement = document.querySelector(`${popupClass} .currentSlide`);
-              if (currentSlideElement) {
-                currentSlideElement.textContent = currentSlide;
-              }
-            }
-          }, 100);
+            this.updateSlides();  // 슬라이드 갱신
+            this.updateSize();     // 크기 갱신
+            updateSlideCount(this, popupClass);  // 슬라이드 개수 업데이트
+          }, 200);  // 딜레이를 200ms로 늘려서 더 안정적인 초기화
         },
         slideChange: function () {
-          const currentSlide = this.activeIndex + 1;
-          const currentSlideElement = document.querySelector(`${popupClass} .currentSlide`);
-          if (currentSlideElement && !isNaN(currentSlide)) {
-            currentSlideElement.textContent = currentSlide;
-          } else {
-            console.error("슬라이드 변경 시 현재 슬라이드 인덱스 오류");
-          }
+          updateSlideCount(this, popupClass);  // 슬라이드 변경 시 카운트 업데이트
+        },
+        slideChangeTransitionEnd: function () {
+          updateSlideCount(this, popupClass);  // 슬라이드 전환 후 카운트 업데이트
         },
       }
     });
   }
 
+  function updateSlideCount(swiper, popupClass) {
+    // 슬라이드 개수를 계산
+    const totalSlides = swiper.slides.length;
+
+    // 현재 슬라이드 번호 계산
+    const currentSlide = swiper.realIndex + 1;  // 실제 현재 슬라이드 번호 (loopedSlides의 영향을 받지 않음)
+
+    // 디버깅: 전체 슬라이드 개수와 현재 슬라이드 번호 확인
+    console.log('Total Slides:', totalSlides);  // 전체 슬라이드 개수
+    console.log('Current Slide:', currentSlide);  // 현재 슬라이드 번호
+
+    // 전체 슬라이드 개수 출력
+    const totalSlideElement = document.querySelector(`${popupClass} .totalSlide`);
+    if (totalSlideElement) {
+      totalSlideElement.textContent = totalSlides;  // 전체 슬라이드 개수
+    }
+
+    // 현재 슬라이드 번호 출력
+    const currentSlideElement = document.querySelector(`${popupClass} .currentSlide`);
+    if (currentSlideElement) {
+      currentSlideElement.textContent = currentSlide;  // 현재 슬라이드 번호
+    }
+  }
+
+  // 여러 팝업에 대해 각각 Swiper 초기화
   const popupSwiper01 = initializePopupSwiper('.solutionsWrap .popup01');
   const popupSwiper02 = initializePopupSwiper('.solutionsWrap .popup02');
   const popupSwiper03 = initializePopupSwiper('.solutionsWrap .popup03');
@@ -416,6 +411,33 @@ $(function () {
   const popupSwiper05 = initializePopupSwiper('.solutionsWrap .popup05');
   const popupSwiper06 = initializePopupSwiper('.solutionsWrap .popup06');
 
+  $('.casesRight .slickWrap .slick').slick({
+    variableWidth: true,
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    accessibility: false,
+    draggable: true,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    zIndex: 1000,
+    pauseOnHover: false,
+    autoplaySpeed: 2000,
+    speed: 1500,
+    responsive: [ // 반응형 웹 구현 옵션
+      {
+        breakpoint: 415, //화면 사이즈 960px
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1
+        }
+      },
+    ]
+  });
+
+
+  // 팝업 열기 및 닫기 동작
   $('.popupClick01').click(function () {
     $('.solutionsWrap .popup01').show();
     $('.solutionsWrap .bg').show();
@@ -451,7 +473,7 @@ $(function () {
     $('.solutionsWrap .bg').hide();
   });
 
-  $('.solutionsWrap .bg').click(function () {
+  $('solutionsWrap .bg').click(function () {
     $('.popup').hide();
     $('.solutionsWrap .bg').hide();
   });

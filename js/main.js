@@ -6,10 +6,10 @@ $(function () {
     loop: true,
     slidesPerView: 'auto',
     speed: 1300,
-    autoplay: {
-      delay: 8000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 8000,
+    //   disableOnInteraction: false,
+    // },
     navigation: {
       nextEl: '#visualWrap .nextBtn', // Next 버튼 선택자
     },
@@ -19,6 +19,7 @@ $(function () {
         $('#visualWrap .imgBox').eq(this.activeIndex).addClass('active');
       },
       slideChange: function () {
+
         $('#visualWrap .textBox').addClass('active');
         $('#visualWrap .textBox').removeClass('active');
         $('#visualWrap .textBox').eq(this.activeIndex).addClass('active');
