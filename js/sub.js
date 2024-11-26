@@ -362,6 +362,8 @@ $(function () {
 
   function initializePopupSwiper(popupClass) {
     return new Swiper(`${popupClass} .swiper-container`, {
+      observer: true, // DOM 변경 감지 활성화
+      observeParents: true, // 부모 요소의 변경 감지 활성화
       loop: false,  // Loop을 사용할 때 슬라이드 갯수가 왜곡될 수 있습니다.
       slidesPerView: 1,
       navigation: {
