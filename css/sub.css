@@ -489,3 +489,70 @@ main{margin-top: 111px; min-height: 500px;}
   .productWrap .tab{flex-direction: column; gap: 10px;}
 
 }
+
+/* 문의 */
+.contactWrap .contactBox{padding-top: 103px; position: relative; margin-top: -174px; background-color: #fff; z-index: 9;}
+.contactWrap .top .phone{margin-bottom: 46px; padding-top: 50px; position: relative; display: block; text-align: center; font-size: 22px; font-weight: 500; color: #1c1c1c; color: #1c1c1c; line-height: 1;}
+.contactWrap .top .phone::before{padding: 30px 30px 0 0; content: ''; position: absolute; top:0; left:50%; transform: translateX(-50%); background-image: url(../images/sub/phone_icon.png); background-repeat: no-repeat; background-size: 100% auto;}
+.contactWrap .top .infoList{margin-bottom: 30px; display: flex; gap: 0 71px; align-items: center; justify-content: center;} 
+.contactWrap .top .infoList li{position: relative; display: flex; gap: 0 5px; align-items: center; align-items: center;}
+.contactWrap .top .infoList li span{flex-shrink: 0; font-size: 15px; font-weight: 500; color: #1c1c1c;}
+.contactWrap .top .infoList li em{font-size: 15px; color: #1c1c1c;}
+.contactWrap .top .infoList li::after{content: ''; position: absolute; top:8px; right:-35px; width: 1px; height: 6px; background-color: #2a2a2a;}
+.contactWrap .top .infoList li:last-child::after{display: none;}
+.contactWrap .map{margin-bottom: 151px; height: 589px;}
+.contactWrap .map img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.contactWrap .questionBox{display: flex; gap: 0 125px;}
+.contactWrap .questionBox .questionTitle{flex-shrink: 0; text-transform: uppercase;}
+.contactWrap .questionBox .questionTitle span{display: block; margin-bottom: 5px; color: #000;}
+.contactWrap .questionBox .questionTitle h3{font-weight: 500; font-size: 50px; color: #000; line-height: 1.1;}
+.contactWrap .questionBox .questionTitle h3 strong{font-weight: 700;}
+.contactWrap .questionBox .questionList{border-top: 2px solid #000;}
+.contactWrap .questionBox .questionList li{border-bottom: 1px solid #ababab;}
+.contactWrap .questionBox .questionList .questionText .view{padding: 22px 22px 0 0; position: absolute; top: 50%; right:0; transform: translateY(-50%); background-image: url(../images/sub/view_icon.png); background-repeat: no-repeat; background-size: auto 100%;} 
+.contactWrap .questionBox .questionList .questionText{display: block; position: relative; padding: 26px 66px 26px 30px; }
+.contactWrap .questionBox .questionList .questionText.active + .answerTextBox{display: block;}
+.contactWrap .questionBox .questionList .answerTextBox{display: none; padding: 0 20px 70px 30px;}
+.contactWrap .questionBox .questionList .questionText span{position: relative; display: flex; gap: 0 9px;  font-size: 22px; font-weight: 700; color: #202020;}
+.contactWrap .questionBox .questionList .questionText span::before{align-self: flex-start; margin-top: 7px; content: ''; padding: 16px 27px 0 0; background-image: url(../images/sub/question_icon.png); background-repeat: no-repeat; background-size: 100% auto;}
+.contactWrap .questionBox .questionList .answerText{ display: flex; gap: 0 9px; position: relative; font-weight: 300; color: #202020; line-height: 2.3;}
+.contactWrap .questionBox .questionList .answerText::before{margin-top: 10px; content: ''; padding: 16px 26px 0 0; background-image: url(../images/sub/answer_icon.png); background-repeat: no-repeat; background-size: 100% auto;}
+.contactWrap .questionBox .questionList .answerText .closeBtn{position: absolute; bottom: -45px; right:0; padding: 22px 22px 0 0; background-image: url(../images/sub/close_icon.png); background-repeat: no-repeat; background-size: 100% auto;}
+
+ @media (max-width: 1199px){
+
+  .contactWrap .contactBox{padding-top: 76px; margin-top: -89px;}
+  .contactWrap .top .phone{margin-bottom: 35px; font-size: 20px;}
+  .contactWrap .top .phone::before{padding: 26px 26px 0 0;}
+  .contactWrap .map{height: 430px; margin-bottom: 100px;}
+  .contactWrap .questionBox .questionTitle h3{font-size: 30px;}
+  .contactWrap .questionBox{gap: 0 80px;}
+  .contactWrap .questionBox .questionList .questionText span{font-size: 20px;}
+  .contactWrap .questionBox .questionList .questionText span::before{margin-top: 4px;}
+  .contactWrap .questionBox .questionList .answerText::before{margin-top: 8px;}
+
+ }
+
+ @media (max-width: 1024px){
+
+  .contactWrap .top .infoList{flex-direction: column; align-items: center; gap: 10px 0;}
+  .contactWrap .top .infoList li::after{display: none;}
+  .contactWrap .map{margin-bottom: 80px;}
+  .contactWrap .questionBox{flex-direction: column; gap: 30px 0;}
+  
+ }
+
+ @media (max-width: 767px){
+
+  .contactWrap .map{margin-bottom: 50px;}
+  .contactWrap .contactBox{padding-top: 56px;}
+  .contactWrap .questionBox{gap: 20px 0;}
+  .contactWrap .questionBox .questionTitle h3{font-size: 20px;}
+  .contactWrap .questionBox .questionList .questionText span{font-size: 18px;}
+  .contactWrap .questionBox .questionList .questionText span::before{padding: 16px 25px 0 0;}
+  .contactWrap .questionBox .questionList .questionText{padding: 26px 43px 26px 20px;}
+  .contactWrap .top .phone::before{padding: 20px 20px 0 0;}
+  .contactWrap .top .phone{margin-bottom: 30px; padding-top: 42px; font-size: 18px;}
+  .contactWrap .questionBox .questionList .answerTextBox{padding: 0 20px 70px 20px;}
+
+ }
