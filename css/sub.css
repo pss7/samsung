@@ -306,8 +306,8 @@ main{margin-top: 111px; min-height: 500px;}
 .solutionsWrap .casesBox .casesLeft{flex-shrink: 0; padding: 239px 0 0;}
 .solutionsWrap .casesBox .casesLeft .titleBox{margin:0 0 17px;}
 .solutionsWrap .casesBox .casesLeft .titleBox .title{font-size: 60px; color: #000; }
+.solutionsWrap .casesBox .casesRight .casesSlide .swiper-slide{width: auto; margin-right: 79px;}
 .solutionsWrap .casesBox .casesRight .casesSlide a:hover img{transform: scale(1.3);}
-.solutionsWrap .casesBox .casesRight .casesSlide .slick-slide{width: 374px; margin-right: 79px;}
 .solutionsWrap .casesBox .casesRight .casesSlide a{display: block; }
 .solutionsWrap .casesBox .casesRight .casesSlide a .imgBox{overflow: hidden;}
 .solutionsWrap .casesBox .casesRight .casesSlide a .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover; transition: all 1s;}
@@ -379,12 +379,14 @@ main{margin-top: 111px; min-height: 500px;}
   .solutionsWrap .popup .control .closeBtn::after{padding: 15px 15px 0 0;}
   .solutionsWrap .popup .control .count{margin-right: 10px; font-size: 18px;}
 
+  .solutionsWrap .casesBox .casesRight .casesSlide .swiper-slide{margin-right: 35px;}
+
 }
 
 @media (max-width: 414px){
 
   .solutionsWrap .casesBox{padding: 0 20px;}
-  .solutionsWrap .casesBox .casesRight .casesSlide .slick-slide{width: 100%; margin: 0;}
+  .solutionsWrap .casesBox .casesRight .casesSlide .swiper-slide{margin-right: 0;}
 
 }
 

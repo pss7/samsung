@@ -402,9 +402,7 @@ $(function () {
 
     const totalSlides = swiper.slides.length;
 
-
     const currentSlide = swiper.realIndex + 1;
-
 
     console.log('Total Slides:', totalSlides);
     console.log('Current Slide:', currentSlide);
@@ -415,13 +413,11 @@ $(function () {
       totalSlideElement.textContent = totalSlides;
     }
 
-
     const currentSlideElement = document.querySelector(`${popupClass} .currentSlide`);
     if (currentSlideElement) {
       currentSlideElement.textContent = currentSlide;
     }
   }
-
 
   const popupSwiper01 = initializePopupSwiper('.solutionsWrap .popup01');
   const popupSwiper02 = initializePopupSwiper('.solutionsWrap .popup02');
@@ -429,6 +425,14 @@ $(function () {
   const popupSwiper04 = initializePopupSwiper('.solutionsWrap .popup04');
   const popupSwiper05 = initializePopupSwiper('.solutionsWrap .popup05');
   const popupSwiper06 = initializePopupSwiper('.solutionsWrap .popup06');
+
+  const swiper14 = new Swiper('.casesRight .swiper-container', {
+    loop: true,
+    slidesPerView: 'auto',
+    414: {
+      slidesPerView: 1,
+    }
+  });
 
   $('.casesRight .slickWrap .slick').slick({
     variableWidth: true,
@@ -454,7 +458,6 @@ $(function () {
       },
     ]
   });
-
 
   // 팝업 열기 및 닫기 동작
   $('.popupClick01').click(function () {
@@ -495,6 +498,12 @@ $(function () {
   $('solutionsWrap .bg').click(function () {
     $('.popup').hide();
     $('.solutionsWrap .bg').hide();
+  });
+
+  $('.solutionsWrap .btnBox .link').click(function () {
+    $('.solutionsWrap .popup01').show();
+    $('.solutionsWrap .bg').show();
+    return false;
   });
 
 
