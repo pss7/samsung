@@ -11,7 +11,7 @@ $(function () {
       disableOnInteraction: false,
     },
     navigation: {
-      nextEl: '#visualWrap .nextBtn', // Next 버튼 선택자
+      nextEl: '#visualWrap .nextBtn',
     },
     on: {
       init: function () {
@@ -23,19 +23,19 @@ $(function () {
         $('#visualWrap .textBox').addClass('active');
         $('#visualWrap .textBox').removeClass('active');
         $('#visualWrap .textBox').eq(this.activeIndex).addClass('active');
-    
+
         $('#visualWrap .imgBox').addClass('active');
         $('#visualWrap .imgBox').removeClass('active');
         $('#visualWrap .imgBox').eq(this.activeIndex).addClass('active');
       },
       autoplayTimeLeft(s, time, progress) {
-              if (progressCircleContainer) {
-          progressCircleContainer.style.setProperty("--progress", progress);  // progress 값을 --progress로 설정
+        if (progressCircleContainer) {
+          progressCircleContainer.style.setProperty("--progress", progress);
         }
       }
     },
   });
-  
+
   /* aos */
   $(window).load(function () {
     AOS.init({
