@@ -6,6 +6,19 @@ body.of{overflow: hidden;}
 aside{display: none; position: fixed; right:85px; bottom: 30px; z-index: 999;}
 aside a{display: block; padding: 68px 68px 0 0; background-image: url(../images/common/top.jpg); background-repeat: no-repeat; background-size: 100% auto;}
 
+@media (max-width: 1199px){
+
+  aside{right: 20px;}
+  aside a{padding: 45px 45px 0 0;}
+  
+}
+
+@media (max-width: 767px){
+
+  aside{display: none!important;}
+  
+}
+
 /* 가운데영역 */
 .container{max-width: 1800px; margin: 0 auto; padding: 0 20px;}
 .inner{max-width: 1640px; margin: 0 auto; padding: 0 20px;}

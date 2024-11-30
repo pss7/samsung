@@ -60,7 +60,7 @@ $(function () {
     speed: 1500,
     responsive: [
       {
-        breakpoint: 414,
+        breakpoint: 415,
         settings: {
           variableWidth: false,
           slidesToShow: 1
