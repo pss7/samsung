@@ -84,7 +84,7 @@ main{margin-top: 111px;}
 #productWrap .productList a .textBox{padding: 351px 10px 0 14px;}
 #productWrap .productList a .textBox h4{margin-bottom: 4px; font-size: 24px; font-weight: 700; color: #000;}
 #productWrap .productList a .textBox span{display: block; font-size: 11px; color: #404040;}
-#productWrap .productList a .view{position: absolute; right:33px; bottom: 30px; width: 111px; height: 32px; line-height: 32px; border: 1px solid #0c69f4; border-radius: 50px; text-align: center; font-size: 9px; color: #0c69f4;} 
+#productWrap .productList a .view{ position: absolute; right:33px; bottom: 30px; width: 111px; height: 32px; line-height: 32px; border: 1px solid #0c69f4; border-radius: 50px; text-align: center; font-size: 9px; color: #0c69f4;} 
 #productWrap .productList a:hover{background-color: #0c69f4;}
 #productWrap .productList a:hover .textBox h4{color: #fff;}
 #productWrap .productList a:hover .textBox span{color: #fff;}
@@ -171,7 +171,7 @@ main{margin-top: 111px;}
 @media (max-width: 414px){
 
   #productWrap{padding: 55px 20px;}
-  #productWrap .productList a{margin: 0; width: 100%; height: 442px;}
+  #productWrap .productList a{margin: 0; padding-bottom: 64px; width: 100%; height: auto;} 
   #productWrap .productList a .imgBox .img{position: relative; height: 0; padding-top: 80%;}
   #productWrap .productList a .imgBox .img img{position: absolute; top:0; left:0; right:0; bottom: 0; } 
   #productWrap .swiper-container{margin: 0;}
