@@ -43,49 +43,59 @@ $(function () {
     });
   });
 
-  const swiper = new Swiper('#productWrap .swiper-container', {
-    loop: true,
-    slidesPerView: 'auto',
-    on: {
-      slideChange: function () {
-        $('.productTab a').removeClass('active');
-        if (this.realIndex >= 0 && this.realIndex <= 4) {
-          $('.productTab li:nth-child(1) a').addClass('active');
-        } else if (this.realIndex >= 5 && this.realIndex <= 7) {
-          $('.productTab li:nth-child(2) a').addClass('active');
+  /* 제품 */
+  $('#productWrap .slickWrap .slick').slick({
+    variableWidth: true,
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    accessibility: false,
+    draggable: true,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    zIndex: 1000,
+    pauseOnHover: false,
+    autoplaySpeed: 2000,
+    speed: 1500,
+    responsive: [
+      {
+        breakpoint: 414,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1
         }
-      }
-    },
-
-    breakpoints: {
-      414: {
-
-        centeredSlides: true,
-        slidesPerView: 'auto',
       },
-    }
+    ]
   });
 
-  if (swiper.realIndex >= 0 && swiper.realIndex <= 4) {
-    $('.productTab li:nth-child(1) a').addClass('active');
-  } else if (swiper.realIndex >= 5 && swiper.realIndex <= 7) {
-    $('.productTab li:nth-child(2) a').addClass('active');
+  function updateActiveTab(currentSlideIndex) {
+    if (currentSlideIndex >= 0 && currentSlideIndex <= 4) {
+      $('#productWrap .titleBox .productTab li a').removeClass('active');
+      $('#productWrap .titleBox .productTab li:nth-child(1) a').addClass('active');
+    }
+    else if (currentSlideIndex >= 5 && currentSlideIndex <= 7) {
+      $('#productWrap .titleBox .productTab li a').removeClass('active');
+      $('#productWrap .titleBox .productTab li:nth-child(2) a').addClass('active');
+    }
   }
 
-  $('.productTab a').click(function (e) {
+  $('#productWrap .slickWrap .slick').on('afterChange', function (event, slick, currentSlide) {
+    updateActiveTab(currentSlide);
+  });
 
-    e.preventDefault();
-    $('.productTab a').removeClass('active');
-    $(this).addClass('active');
+  updateActiveTab(0);
 
-    const index = $(this).parent().index();
+  $('#productWrap .titleBox .productTab li:nth-child(1) a').click(function () {
+    $('#productWrap .slickWrap .slick').slick('slickGoTo', 0);
+    updateActiveTab(0);
+    return false;
+  });
 
-    if (index === 0) {
-      swiper.slideTo(0);
-    } else if (index === 1) {
-      swiper.slideTo(5);
-    }
-
+  $('#productWrap .titleBox .productTab li:nth-child(2) a').click(function () {
+    $('#productWrap .slickWrap .slick').slick('slickGoTo', 5);
+    updateActiveTab(5);
+    return false;
   });
 
   /* 스크롤 */
