@@ -434,31 +434,6 @@ $(function () {
     }
   });
 
-  $('.casesRight .slickWrap .slick').slick({
-    variableWidth: true,
-    autoplay: false,
-    arrows: false,
-    dots: false,
-    accessibility: false,
-    draggable: true,
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    zIndex: 1000,
-    pauseOnHover: false,
-    autoplaySpeed: 2000,
-    speed: 1500,
-    responsive: [
-      {
-        breakpoint: 415,
-        settings: {
-          variableWidth: false,
-          slidesToShow: 1
-        }
-      },
-    ]
-  });
-
   // 팝업 열기 및 닫기 동작
   $('.popupClick01').click(function () {
     $('.solutionsWrap .popup01').show();
