@@ -1,27 +1,24 @@
 @charset "utf-8";
 
-main{margin-top: 111px;}
-
-@media (max-width: 1199px){
-
-  main{margin-top: 0;}
-
-}
-
 /* 메인 */
 #visualWrap{position: relative;}
-#visualWrap .imgBox{position: relative; height: 1074px;  overflow: hidden;}
+#visualWrap .swiper-container{overflow: visible;}
+#visualWrap .imgBox{position: relative; height: 1012px;  overflow: hidden;}
 #visualWrap .imgBox.active .mainImg{transform: scale(1);}
 #visualWrap .imgBox .mainImg{display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.5); transition: all 7.5s;}
-#visualWrap .textBox.active .productImg{opacity: 1; transform: translateY(0);}
+/* #visualWrap .textBox.active .productImg{opacity: 1; transform: translateY(0);} */
 #visualWrap .textBox .productImg{margin: 30px 0 0 -70px; opacity: 0; transform: translateY(60px); transition: all 2s .7s;}
-#visualWrap .textBox{position: absolute; top:21.2%; left: 20.1%; width: 100%;}
+#visualWrap .textBox{position: absolute; top:38.5%; /*left: 32.33%;*/ left: calc(50% - 245px); text-align: right;}
 #visualWrap .textBox h2{ opacity: 0; transform: translateY(60px); margin-bottom: 48px; font-size: 60px; color: #fff; font-weight: 400; text-transform: uppercase; line-height: 1.2; transition: all 2s .5s;}
 #visualWrap .textBox h2 strong{font-weight: 700;}
 #visualWrap .textBox p{ opacity: 0; transform: translateY(60px); color: #fff; text-transform: uppercase; transition: all 2s .6s;}
+#visualWrap .textBox.active + .productImgBox,
 #visualWrap .textBox.active h2,
 #visualWrap .textBox.active p{opacity: 1; transform: translateY(0);}
-#visualWrap .controlBox{position: absolute; width: 27%; top:50%; right: 0; transform: translateY(-50%);  z-index: 9999;} 
+#visualWrap .textBox .box{display: inline-block;}
+#visualWrap .productImgBox{opacity: 0; transform: translateY(60px); position: absolute; left: calc(100% - 199px); bottom: -27px; z-index: 99999999999; transition: all 2s .7s;}
+#visualWrap .productImgBox img{display: block;}
+#visualWrap .controlBox{position: absolute; width: 27%; top:57%; right: 0; transform: translateY(-50%);  z-index: 9999;} 
 #visualWrap .control{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 224px; height: 224px;}
 #visualWrap .control .circleProgress .bg{position:absolute; width:224px; height:224px; border-radius:50%; border:.3px solid rgba(255,255,255,.5)}
 #visualWrap .control .circleProgress{width: 224px; height: 224px; --progress: 1;}
@@ -32,17 +29,19 @@ main{margin-top: 111px;}
 #visualWrap .visualSlide.swiper-slide{width: 73%;}
 #visualWrap .visualSlide.swiper-slide-next::before{content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 37%; background-color: #0070ff; z-index: 99999; opacity: .8;}
   
-@media (max-width: 1199px){
+@media (max-width: 1480px){
 
   #visualWrap .controlBox{width: auto; top: auto; transform: none;  bottom: 50px; right: 6%;} 
   #visualWrap .control{position: static; transform: none;}
   #visualWrap .swiper-slide{width: 100%;}
   #visualWrap .imgBox{height: 100vh;}
   #visualWrap .textBox h2{margin-bottom: 30px; font-size: 45px;}
-  #visualWrap .textBox{top: 25%; left: 6%;}
+  #visualWrap .textBox{top: 25%; left: 6%; text-align: left;}
   #visualWrap .visualSlide.swiper-slide{width: 100%;}
   #visualWrap .visualSlide.swiper-slide-next::before{display: none;}
   #visualWrap .textBox .productImg{width: 250px; margin: 25px 0 0;}
+  #visualWrap .productImgBox{left: 81px;}
+  #visualWrap .productImgBox img{width: 273px;}
 
 }
 
@@ -56,6 +55,26 @@ main{margin-top: 111px;}
   #visualWrap .control,
   #visualWrap .control .circleProgress,
   #visualWrap .control .circleProgress .bg{width: 150px; height: 150px;}
+  #visualWrap .productImgBox{left: 20px;}
+  #visualWrap .productImgBox img{width: 306px;}
+
+}
+
+@media (max-width: 480px){
+
+  #visualWrap .productImgBox img{width: 230px;}
+
+}
+
+@media (max-width: 414px){
+
+  #visualWrap .productImgBox img{width: 200px;}
+
+}
+
+@media (max-width: 360px){
+
+  #visualWrap .productImgBox img{width: 160px;}
 
 }
 
@@ -182,6 +201,7 @@ main{margin-top: 111px;}
 #contactWrap{padding: 88px 0; background-color: #f5f5f5; background: url(../images/main/contact_bg.jpg)no-repeat center; background-size: cover;}
 #contactWrap .contactBox{display: flex; justify-content: space-between;}
 #contactWrap .mapBox{position: relative; padding-top: 51.45%; width: 50.23%; height: 0; border: 1px solid #dcdcdc;}
+#contactWrap .mapBox iframe{position: absolute; top:0; left:0; right: 0; bottom: 0; width: 100%; height: 100%;}
 #contactWrap .mapBox img{position: absolute; top:0; left:0; right:0; bottom: 0; width: 100%; height: 100%; object-fit: cover;}
 #contactWrap .infoText{padding: 189px 0 0; margin-right: 80px;}
 #contactWrap .infoText{text-align: right;}
