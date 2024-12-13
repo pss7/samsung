@@ -13,11 +13,13 @@ $(function () {
 
   });
 
+  /*
   $('.contactWrap .closeBtn').click(function () {
 
     $(this).parents('li').children('.questionText').removeClass('active');
 
   });
+  */
 
   /* 제품 */
   const swiper02 = new Swiper('.productSlide01 .swiper-container', {
