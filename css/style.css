@@ -31,19 +31,18 @@ aside a{display: block; padding: 68px 68px 0 0; background-image: url(../images/
 #header .logoBox h1 a img{display: block;}
 #header .menuBox.hidden{overflow: hidden;}
 #header .menuBox nav .depth01{ display: flex; align-items: center;}
-#header .menuBox nav .depth01 li h2.active + .depth02{opacity: 1; top: 109px;}
+#header .menuBox nav .depth01 li h2.active + .depth02{display: flex; top: 109px;}
 #header .menuBox nav .depth01 li h2.active a{color: #000;}
 #header .menuBox nav .depth01 li h2 a{display: block; padding: 45px 30px; font-size: 14px ; color: #969696; font-weight: 400; font-weight: 500; transition: all .3s;}
 #header .menuBox .menuBtnBox .munuBtn{margin-left: 33px; position: relative; display: block; width: 58px; height: 19px;}
 #header .menuBox .menuBtnBox .munuBtn::after{content: ''; position: absolute; top:0; left:0; right:0; height: 2px; background-color: #000;}
 #header .menuBox .menuBtnBox .munuBtn::before{content: ''; width: 28px; position: absolute; bottom: 0; right:0; height: 1px; background-color: #000;}
-#header .menuBox nav .depth02{display: flex; justify-content: center; gap: 0 151px; opacity: 0; padding: 51px 10px 60px; position: absolute; top:111px; left:0; right:0; border: 1px solid #272727; border-top: 1px solid #272727; background-color: #fff; z-index: -999; transition: all .35s; border-bottom: 1px solid #272727;}
+#header .menuBox nav .depth02{display: none; justify-content: center; gap: 0 151px; padding: 51px 10px 60px; position: absolute; top:111px; left:0; right:0; border: 1px solid #272727; border-top: 1px solid #272727; background-color: #fff; border-bottom: 1px solid #272727;}
 #header .menuBox nav .depth02 > li{ display: flex; align-items: flex-start; gap: 0 21px;}
 #header .menuBox nav .depth02 li h3 a{/* padding: 10px 0; */ padding: 0; display: block; font-size: 15px; color: #111; text-align: center; font-weight: 700; word-break: keep-all; transition: all .3s;}
 #header .menuBox nav .depth02 li h3 a:hover{text-decoration: underline;} 
 #header .menuBox nav .depth02 li .headerProductList li{margin-bottom: 21px;}
-#header .menuBox nav .depth02 li .headerProductList li h4 a{font-size: 14px; color: #000; font-weight: 400;}
-#header .menuBox nav .depth02 li .headerProductList li h4 a:hover{text-decoration: underline;}
+#header .menuBox nav .depth02 li .headerProductList li h4{font-size: 14px; color: #000; font-weight: 400;}
 #header .menuBox{display: flex; align-items: center; flex-shrink: 0;}
 #header .menuWrap.active{top: 0;}
 #header .menuWrap{position: fixed; top:-3000px; left:0; right:0; height: 100%; background-color: #fff; overflow-y: auto; transition: all .5s;}
