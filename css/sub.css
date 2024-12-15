@@ -384,7 +384,7 @@ main{margin-top: 111px; min-height: 500px;}
 .productWrap .tab{padding: 0 20px; margin-bottom: 74px; display: flex; gap: 0 20px; justify-content: center;}
 .productWrap .tab li a{display: block; padding: 11px 6px; width: 350px; border: 1px solid #c1c1c1; text-align: center; border-radius: 15px; font-size: 18px; color: #000;}
 .productWrap .tab li a.active{font-weight: 700; border: 1px solid #0c69f4; color: #0c69f4;}
-.productWrap .productTab{max-width: 1860px; width: 100%; padding: 0 20px; margin-bottom: 76px; display: flex; justify-content: center; gap: 0 7%;}
+.productWrap .productTab{max-width: 1860px; width: 100%; padding: 0 20px; margin: 0 auto 76px; display: flex; justify-content: center; gap: 0 7%;}
 .productWrap .productTab li a{ display: flex; gap: 0 23px;}
 .productWrap .productTab li a .imgBox img{display: block;}
 .productWrap .productTab li a .textBox{padding-top: 58px; position: relative; }
