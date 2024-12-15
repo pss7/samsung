@@ -384,8 +384,7 @@ main{margin-top: 111px; min-height: 500px;}
 .productWrap .tab{padding: 0 20px; margin-bottom: 74px; display: flex; gap: 0 20px; justify-content: center;}
 .productWrap .tab li a{display: block; padding: 11px 6px; width: 350px; border: 1px solid #c1c1c1; text-align: center; border-radius: 15px; font-size: 18px; color: #000;}
 .productWrap .tab li a.active{font-weight: 700; border: 1px solid #0c69f4; color: #0c69f4;}
-.productWrap .productTab{max-width: 1371px; width: 100%; padding: 0 20px; margin:0 auto 76px; display: flex; justify-content: center; gap: 0 7%;}
-.productWrap .productTab li{width: 100%;}
+.productWrap .productTab{max-width: 1860px; width: 100%; padding: 0 20px; margin-bottom: 76px; display: flex; justify-content: center; gap: 0 7%;}
 .productWrap .productTab li a{ display: flex; gap: 0 23px;}
 .productWrap .productTab li a .imgBox img{display: block;}
 .productWrap .productTab li a .textBox{padding-top: 58px; position: relative; }
@@ -442,8 +441,9 @@ main{margin-top: 111px; min-height: 500px;}
   .productWrap .productTabContent .infoText .productList01 li h3 a{font-size: 16px;}
 
   .productWrap .productTab{flex-wrap: wrap; gap: 50px 2%;}
-  .productWrap .productTab li{width: 49%;}
-  
+  .productWrap .productTab li{width: 48%;}
+  .productWrap .productTab li a{justify-content: center;}
+
   .productWrap .tab li{flex: 1;}
   .productWrap .tab li a{width: 100%; font-size: 16px; border-radius: 8px;}
 
@@ -477,7 +477,7 @@ main{margin-top: 111px; min-height: 500px;}
 
   .productWrap .productTab li a{flex-direction: column; align-items: center;}
   .productWrap .productTab li a .text{position: static; margin: 0 auto 10px; width: 100%;}
-  .productWrap .productTab li a .textBox{width: 100%; padding: 20px 10px 10px 10px;}
+  .productWrap .productTab li a .textBox{padding-top:30px;}
   .productWrap .tab{flex-direction: column; gap: 10px;}
 
 }
